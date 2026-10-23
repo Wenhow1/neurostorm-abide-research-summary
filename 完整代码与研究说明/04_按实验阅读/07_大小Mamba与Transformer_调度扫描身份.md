@@ -1,0 +1,29 @@
+# 大小Mamba与Transformer 调度 扫描 身份
+
+## 这个实验在问什么
+
+比较算法和容量，并独立检查学习率调度、扫描顺序及身份向量。
+
+## 应重点看什么
+
+base_models.make与models.make；每组改变的是哪一个因素。
+
+## 对应报告
+
+[Word短报告](../../结果简报/07_%E5%A4%A7%E5%B0%8FMamba%E4%B8%8ETransformer_%E8%B0%83%E5%BA%A6%E6%89%AB%E6%8F%8F%E8%BA%AB%E4%BB%BD.docx)
+
+## 完整代码阅读顺序
+
+- [01_小Mamba_288通道_4双向块_轻量线性重建头](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/01_%E5%B0%8FMamba_288%E9%80%9A%E9%81%93_4%E5%8F%8C%E5%90%91%E5%9D%97_%E8%BD%BB%E9%87%8F%E7%BA%BF%E6%80%A7%E9%87%8D%E5%BB%BA%E5%A4%B4.py)
+- [02_大Mamba_576通道_4双向块_较强重建头](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/02_%E5%A4%A7Mamba_576%E9%80%9A%E9%81%93_4%E5%8F%8C%E5%90%91%E5%9D%97_%E8%BE%83%E5%BC%BA%E9%87%8D%E5%BB%BA%E5%A4%B4.py)
+- [03_Transformer_288或576通道_5块6头_完整模块与装配](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/03_Transformer_288%E6%88%96576%E9%80%9A%E9%81%93_5%E5%9D%976%E5%A4%B4_%E5%AE%8C%E6%95%B4%E6%A8%A1%E5%9D%97%E4%B8%8E%E8%A3%85%E9%85%8D.py)
+- [04_脑区模型_固定扫描与身份向量机制对照](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/04_%E8%84%91%E5%8C%BA%E6%A8%A1%E5%9E%8B_%E5%9B%BA%E5%AE%9A%E6%89%AB%E6%8F%8F%E4%B8%8E%E8%BA%AB%E4%BB%BD%E5%90%91%E9%87%8F%E6%9C%BA%E5%88%B6%E5%AF%B9%E7%85%A7.py)
+- [05_脑区模型_上游重建训练验证与梯度记录](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/05_%E8%84%91%E5%8C%BA%E6%A8%A1%E5%9E%8B_%E4%B8%8A%E6%B8%B8%E9%87%8D%E5%BB%BA%E8%AE%AD%E7%BB%83%E9%AA%8C%E8%AF%81%E4%B8%8E%E6%A2%AF%E5%BA%A6%E8%AE%B0%E5%BD%95.py)
+- [06_学习率_停滞5轮减半](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/06_%E5%AD%A6%E4%B9%A0%E7%8E%87_%E5%81%9C%E6%BB%9E5%E8%BD%AE%E5%87%8F%E5%8D%8A.py)
+- [07_学习率_余弦预热与周期重启](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/07_%E5%AD%A6%E4%B9%A0%E7%8E%87_%E4%BD%99%E5%BC%A6%E9%A2%84%E7%83%AD%E4%B8%8E%E5%91%A8%E6%9C%9F%E9%87%8D%E5%90%AF.py)
+- [08_记录策略_每轮验证每5轮存权重](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/08_%E8%AE%B0%E5%BD%95%E7%AD%96%E7%95%A5_%E6%AF%8F%E8%BD%AE%E9%AA%8C%E8%AF%81%E6%AF%8F5%E8%BD%AE%E5%AD%98%E6%9D%83%E9%87%8D.py)
+- [09_上游选参_全610人重训设置生成](../01_%E4%B8%AD%E6%96%87%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81/01_%E5%BD%93%E5%89%8D%E8%84%91%E5%8C%BAMamba%E4%B8%8ETransformer/09_%E4%B8%8A%E6%B8%B8%E9%80%89%E5%8F%82_%E5%85%A8610%E4%BA%BA%E9%87%8D%E8%AE%AD%E8%AE%BE%E7%BD%AE%E7%94%9F%E6%88%90.py)
+
+## 结果解释边界
+
+先读该主题短报告的结果与边界，再结合源码解释原因。不同数据划分、人群、读出维数和选择规则的数值不能合并排名。代码结构存在不代表已在所有条件下运行。历史文件头中的本地路径用于追溯，不是本公开仓库可直接运行的路径。
