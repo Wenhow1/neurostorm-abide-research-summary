@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "figures": 13,
+  "scheduler_runs_checked": 40,
+  "scheduler_epochs_checked": 4000,
+  "new_training": false,
+  "inference": false,
+  "holdout_evaluation": false,
+  "individual_data_included": false,
+  "known_missing": "残差相关上游逐fold/seed结果，已有组均值；未反推"
+}

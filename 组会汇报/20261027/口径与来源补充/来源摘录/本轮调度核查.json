@@ -1,0 +1,249 @@
+{
+  "status": "PASS",
+  "runs": 40,
+  "epochs_checked": 4000,
+  "method": "CPU-only scalar scheduler replay from saved validation metrics; no model import, inference or training",
+  "scheduler_source_sha256": "755eb0d45ec32b5a46344ae8c0519ab7466e66feb8e1fd49ab6348e6f98d439e",
+  "checks": [
+    {
+      "run_id": "MS_base_f0_s1",
+      "epochs": 100,
+      "history_sha256": "cc0edb2a0d1e34dfc4a9df5764eaefb5e204263fada4252611c0bbb545687b68",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f0_s2",
+      "epochs": 100,
+      "history_sha256": "179adf12ff6eaae26b665f4d42672b5fd13a7ec3b577c04f12cc2e0f4b0a447a",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f1_s1",
+      "epochs": 100,
+      "history_sha256": "561202663050e1d4d7fb646c1cbe5a429a0e7299beafb1fe2f80ef3855f39f26",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f1_s2",
+      "epochs": 100,
+      "history_sha256": "656dc6ceeb891a81799c41f54dfbca350a79c810617973f3d1e42417e4a9ca15",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f2_s1",
+      "epochs": 100,
+      "history_sha256": "61c09d4292c97ba139b6bfa16567bc7abba499a3523459311a4fade0b51c1c11",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f2_s2",
+      "epochs": 100,
+      "history_sha256": "152949672edb25aba93197a7aa097c9b386a4d19f61cb3ea305c24bfd7c3fe2d",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f3_s1",
+      "epochs": 100,
+      "history_sha256": "eb6f5835788f83da7331260bc43f15e6d61ba53c1c5addb419f1a469bbfe0b4b",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f3_s2",
+      "epochs": 100,
+      "history_sha256": "a030a86a2d349ae5f2ae5c345b18a2b2fdc604a990681d15bc411c1f03e3a63e",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f4_s1",
+      "epochs": 100,
+      "history_sha256": "87079dbae0052c4bea85d226d60c7c3d74a6893c2e1d5aff10f11f6316eaaf32",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_base_f4_s2",
+      "epochs": 100,
+      "history_sha256": "0c572863419f0b0b285a52d8536e08f647773023e4a9db0a19184773869d6810",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f0_s1",
+      "epochs": 100,
+      "history_sha256": "a3a4abddba9efb2e19c61f80863272da1373007e87fa7147c83a1ab5486d1e8d",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f0_s2",
+      "epochs": 100,
+      "history_sha256": "85f1b44cdaa930aeb6e4800bf15f6f84975a9e440c1c7762add45876a0c1ff52",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f1_s1",
+      "epochs": 100,
+      "history_sha256": "5561687bdf11795cb9cac5eb5977d37c0644b2f8ca20b5582e55faedf6e8cd84",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f1_s2",
+      "epochs": 100,
+      "history_sha256": "73f9b7607c3e00f8149b599a0b315149aa7cba800ca12d2a1ce940fa0f5dc4cd",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f2_s1",
+      "epochs": 100,
+      "history_sha256": "70b24e76feb2e217d9256cc040d098287dc2fbbd0fe2c64633337562dd19fec9",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f2_s2",
+      "epochs": 100,
+      "history_sha256": "00d1e0c06567316116f1d9d12aeec786fd87807a44d7b490c96350e00bac4024",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f3_s1",
+      "epochs": 100,
+      "history_sha256": "bb227da895cc968352f4980a6dc7d24affb391727a4734a8e14148eb770dd672",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f3_s2",
+      "epochs": 100,
+      "history_sha256": "90be593ecf5459a06b904cab75d2b48306a885970ecd53c4d58a3825944298f1",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f4_s1",
+      "epochs": 100,
+      "history_sha256": "e1a7a70d60b405680eb5bd47bbd13d9fcde1b21ce9966231ce5b0b73f94eb8ed",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "MS_consistency_f4_s2",
+      "epochs": 100,
+      "history_sha256": "4d3274356d65e6e99771c91c89add7548b4a3c4fe25a850e56a65ff71097e06a",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f0_s1",
+      "epochs": 100,
+      "history_sha256": "ce98bd3bc22ac034dda9d0849519fc954954d120b04fd52593067b8971aa7931",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f0_s2",
+      "epochs": 100,
+      "history_sha256": "1d98ebd72fddcd4e8b307f67d7daaf78f2dec3a1526d2e01b4f8c77c79bb6466",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f1_s1",
+      "epochs": 100,
+      "history_sha256": "ae6a6d4b5edcadc960fe98bc6863359ff830207a57017b16a4c01a57bd1282c1",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f1_s2",
+      "epochs": 100,
+      "history_sha256": "e11a52a6b0c01044efdb5c3242d6845541dc21eb60967e8aa244d212c6cc609b",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f2_s1",
+      "epochs": 100,
+      "history_sha256": "8ebf5ec70b0315bfb36c5e96bc43c21a1cd0adc5e5b4ff0836f121289b30b591",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f2_s2",
+      "epochs": 100,
+      "history_sha256": "6fb150bea085ed8b67ec7517823221d101cc7ec8652a8a0ef8c5337fdb6d8bb3",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f3_s1",
+      "epochs": 100,
+      "history_sha256": "6ea21a4023181d9fc928838130d2d3087ea3969a8a9de924797dd29f2b8c2d27",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f3_s2",
+      "epochs": 100,
+      "history_sha256": "ff2a49d7824ea816fd729f36a7d2fed0acbf062291c81c4a0fb418b04dd25536",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f4_s1",
+      "epochs": 100,
+      "history_sha256": "a0e36b7d9a02b304f966826c9bddbba4c433e78dbc95caa54488b6890a4c712f",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_base_f4_s2",
+      "epochs": 100,
+      "history_sha256": "a45c60927e04fc9ccd4ffbd3d52011304bb210b12d32d967c057a9d5e3e34fb3",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f0_s1",
+      "epochs": 100,
+      "history_sha256": "b0a5f45f13e3b309b28e232ce68e1837f61329df70f46b08d89fc35978d6d660",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f0_s2",
+      "epochs": 100,
+      "history_sha256": "dfc0878a0eb32abce098b888b417aa9883b362e5e6d6c55e0177116d6a457f73",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f1_s1",
+      "epochs": 100,
+      "history_sha256": "31afa59e0af510884318c2180a5d20a3a150ac56e014f95def020c22854caf9d",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f1_s2",
+      "epochs": 100,
+      "history_sha256": "91cbe230d80810f992e90b2d09c2a24c7a99c476bcceac85ebd0252a21095ff5",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f2_s1",
+      "epochs": 100,
+      "history_sha256": "8fd1f1320b8f82e6b918bf2c22b2cb1ca4257db4e7cae07984124f21a8e19557",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f2_s2",
+      "epochs": 100,
+      "history_sha256": "88b6782e0efd59311bc2b12eacb2c517863e293fc8b0ef764ba28a16e559fd02",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f3_s1",
+      "epochs": 100,
+      "history_sha256": "f16064b48e8e8f6795f0c33f1b9787283756a8a639646a39c8aebff0f9dbad7c",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f3_s2",
+      "epochs": 100,
+      "history_sha256": "28d0dc8db184ee5f06cda307d39b4d321c5724184b77bc97a119529e9331dc57",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f4_s1",
+      "epochs": 100,
+      "history_sha256": "0b0e1e37c36d6f4febc62044a71c0a5247b48f30f3cc48be9dc1a27fc1fdc839",
+      "scheduler_exact_replay": true
+    },
+    {
+      "run_id": "TS_consistency_f4_s2",
+      "epochs": 100,
+      "history_sha256": "173dd071f1c6e59a1e96a21da9acfefc0ccea98775b9f5b9a14179c7b94a699b",
+      "scheduler_exact_replay": true
+    }
+  ]
+}

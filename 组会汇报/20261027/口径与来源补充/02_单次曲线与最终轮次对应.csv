@@ -1,0 +1,5 @@
+﻿模型,图02单次最佳轮次,图02设置,图07最终轮次,最终初始LR,最终选中调度,两个种子共享轮次,是否平均最佳轮次,证据
+小Mamba,61,fold0 seed1 fixed1e-4,94,0.0001,plateau,True,False,output/cpac610-schedule-mechanism-20261023/final_receipts/selection.json
+大Mamba,47,fold0 seed1 fixed1e-4,48,0.0003,fixed,True,False,output/cpac610-schedule-mechanism-20261023/final_receipts/selection.json
+小Transformer,99,fold0 seed1 fixed1e-4,100,0.0001,plateau,True,False,output/cpac610-schedule-mechanism-20261023/final_receipts/selection.json
+大Transformer,90,fold0 seed1 fixed1e-4,97,0.0001,plateau,True,False,output/cpac610-schedule-mechanism-20261023/final_receipts/selection.json

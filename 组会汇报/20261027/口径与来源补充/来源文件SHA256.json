@@ -1,0 +1,146 @@
+[
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/MS_f0_s1_1e-04_fixed/history.jsonl",
+    "sha256": "32ee138fb769f20f12b91dcaee270cfca8bd2c8bcd35e24a77c8e21c2632d06b"
+  },
+  {
+    "source_path": "output/cpac610-schedule-mechanism-20261023/final_receipts/selection.json",
+    "sha256": "2443aa7586d772a8dbef22d025b1502724bbdc7511935813c9b93d8ad7f231b6"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/ML_f0_s1_1e-04_fixed/history.jsonl",
+    "sha256": "3bbeba0b5a85471695871a8d27d5f07908bd14a1064d0c0ddb23b04623c432ad"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/TS_f0_s1_1e-04_fixed/history.jsonl",
+    "sha256": "dd5ff4bd02f56fd39aa4eaf5d7a55391632ee6900cbae4aa9d2bbbcc22f4f628"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/TL_f0_s1_1e-04_fixed/history.jsonl",
+    "sha256": "807d57915acc3aa4fc83cdbe71c1a23aba2a301b384b026ec61708ce02029332"
+  },
+  {
+    "source_path": "output/cpac610-residual-objective-20261024/evidence/selection.json",
+    "sha256": "a095a46bbcd6089f94a160a273a7f1ba2ea4b93aef467a4b87b6a533a97f03bd"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/cpac610_roi_consistency_20261025/selection.json",
+    "sha256": "606fe245627f54abbd55cce31a2c48e67b9157f56201eee09c25a95efc4748e6"
+  },
+  {
+    "source_path": "output/cpac610-schedule-mechanism-20261023/plateau.py",
+    "sha256": "755eb0d45ec32b5a46344ae8c0519ab7466e66feb8e1fd49ab6348e6f98d439e"
+  },
+  {
+    "source_path": "output/cpac610-schedule-mechanism-20261023/select_refits.py",
+    "sha256": "ce5c79d2592c3be488e33974ee0cadce863322e96fc5c9a000ed813fca5e45d9"
+  },
+  {
+    "source_path": "output/cpac610-roi-consistency-20261025/continue_pipeline.py",
+    "sha256": "3f8f98f2412792a0e31c3d8728afc503447e26727b08dd99ed4eef234649a82d"
+  },
+  {
+    "source_path": "output/cpac610-schedule-mechanism-20261023/recording_policy.py",
+    "sha256": "f17fb84c092a79bc7ed748a2ec8155e1b31048126111eead4a901c7804838763"
+  },
+  {
+    "source_path": "output/cpac610-residual-downstream-20261025/evidence/results/summary.csv",
+    "sha256": "d6cfeda040481cd1ccb1c82626ec568c6bfaeac9f7bab435b97e48963cb7094f"
+  },
+  {
+    "source_path": "output/cpac610-residual-downstream-20261025/evidence/results/folds.csv",
+    "sha256": "1d523a346faee334ba14274de1efb34152fd1cf3c175da0b15f6f3a5ecbb53e0"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/cpac610_consistency_downstream_20261025/results/summary.csv",
+    "sha256": "adb753598b91ed338b2cba1a11091ff360a058f26739ab06ffa1aac88b60b5da"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/cpac610_consistency_downstream_20261025/results/folds.csv",
+    "sha256": "c2b7dbb9c7d046806a4aa758853dec6d496592b866ce77034a7b8b1b0be3ee86"
+  },
+  {
+    "source_path": "output/cpac610-checkpoint-readout-20261024/evidence/verified_results/trajectory.csv",
+    "sha256": "ebf85a862fd1c153ca57f34625051960c9910636fbe7f0e9f186c334ebbf5cdc"
+  },
+  {
+    "source_path": "output/cpac610-readout-heads-20261023/final_evidence/results/comparison.csv",
+    "sha256": "2fcb45fae66d52fcd1980e756d06ed286a43a4a83c730511af439c285f9025e6"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/研究实验代码与结果_分类整理版_20261023_v2/模型结构与代码阅读说明.md",
+    "sha256": "36b2396e4e1ce83b3422c448ea37c788f8553cf69010c5b3b0f8578d0f28ad44"
+  },
+  {
+    "source_path": "output/meeting-20261027/build_figures.py",
+    "sha256": "950ad6cf6ea988595d5f4332740227d0bb7362aec087b89d3f7b1141d5f7d064"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/MS_f0_s1_1e-04_fixed/gradients.jsonl",
+    "sha256": "375907ca49313987e0a82692a93142a3ae15ee8fc5d047e7f5593de328a5f6a0"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/ML_f0_s1_1e-04_fixed/gradients.jsonl",
+    "sha256": "10e9770da143588905caff278d166db4813149c153bffd05f3ffbe70f8fde50b"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/TS_f0_s1_1e-04_fixed/gradients.jsonl",
+    "sha256": "7198ace13d8153ec752da092aa51ce8bf5288d84752bbfa2515e6a0cbcc37e7e"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/五张训练曲线_教师图文汇报_20261023/原始记录/TL_f0_s1_1e-04_fixed/gradients.jsonl",
+    "sha256": "0a748a149a3b733287aae1313a0a0e6d2b4d2cc9154c3312bb5fd73683871631"
+  },
+  {
+    "source_path": "/Users/wenhowl/Documents/组会汇报/10.27/10_完整展开与分类器对照_完整结果_20261023/绘图与汇总.py",
+    "sha256": "cd650d4bcdbda9a56027731cb08f53b40bcdc6a7ee963f1db053c9db51a55b51"
+  },
+  {
+    "source_path": "output/cpac610-checkpoint-readout-20261024/plot_report.py",
+    "sha256": "db177a1882ad635d7a1fb14c80f50dbe85c767ada9b7b5f4c942605ec2e57156"
+  },
+  {
+    "source_path": "output/cpac610-residual-downstream-20261025/report.py",
+    "sha256": "70378560ed01c0f7d9c5b636656439805bd6544b7bc0afafbf74368ae360c946"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/cpac610_roi_consistency_20261025/upstream_summary.json",
+    "sha256": "424be4d34860213be71f3f59ee0645819dc1c63d7c0b99c58c868a974c222e86"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/MS_base_f0_s1/gradients.jsonl",
+    "sha256": "b000fa6fcfa77f8222b314248126b82a226d519b397ba669d9e47cd69fa1349a"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/MS_consistency_f0_s1/gradients.jsonl",
+    "sha256": "c9359429cc651ae7c70307cb9b0fc4461521b71a2233e412ca40817d74eacd7b"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/TS_base_f0_s1/gradients.jsonl",
+    "sha256": "e4d97468ad1c770b669db37b23b0677faefd5be57da00c8e11f31652b8ca0fb0"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/TS_consistency_f0_s1/gradients.jsonl",
+    "sha256": "8e9252e513dbc0a8236f56b82968c274faeaeb74865bc8bed58422d9809a712b"
+  },
+  {
+    "source_path": "output/meeting-20261027/extra_curves.py",
+    "sha256": "1a3d878e90c8d957edb431409475e6b9e35022dcac757010050b74e71b48df17"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/MS_base_f0_s1/history.jsonl",
+    "sha256": "cc0edb2a0d1e34dfc4a9df5764eaefb5e204263fada4252611c0bbb545687b68"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/MS_consistency_f0_s1/history.jsonl",
+    "sha256": "a3a4abddba9efb2e19c61f80863272da1373007e87fa7147c83a1ab5486d1e8d"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/TS_base_f0_s1/history.jsonl",
+    "sha256": "ce98bd3bc22ac034dda9d0849519fc954954d120b04fd52593067b8971aa7931"
+  },
+  {
+    "source_path": "output/cpac610-consistency-downstream-20261025/evidence/training/runs/TS_consistency_f0_s1/history.jsonl",
+    "sha256": "b0a5f45f13e3b309b28e232ce68e1837f61329df70f46b08d89fc35978d6d660"
+  }
+]
