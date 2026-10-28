@@ -1,0 +1,64 @@
+{
+  "01_选中配置的开发结果.png": {
+    "source": "all200 history + 30LR metrics; selected at frozen selection.json",
+    "aggregation": "fivefold equal mean then two seeds; LR fivefold only",
+    "selection_bias": "development maxima used for selection"
+  },
+  "02_三策略与两宽度.png": {
+    "source": "all200 history",
+    "note": "each configuration has own common selected epoch; not training curve; connected line is comparison only"
+  },
+  "03_GCN传播配对诊断.png": {
+    "source": "A/D GCN both widths all10runs each, actualepoch8",
+    "epoch_choice": "A group common optimal epoch8; D not reselected",
+    "pairs_not_independent_patients": true
+  },
+  "04_真实单次loss.png": {
+    "runs": [
+      "A_Mamba_d64_f0_s1",
+      "B_Mamba_d64_f0_s1",
+      "C_Mamba_d64_f0_s1",
+      "A_Transformer_d64_f0_s1",
+      "B_Transformer_d64_f0_s1",
+      "C_Transformer_d64_f0_s1",
+      "A_GCN_d64_f0_s1",
+      "B_GCN_d64_f0_s1",
+      "C_GCN_d64_f0_s1"
+    ],
+    "source_file": "history.jsonl",
+    "width": 64,
+    "fold": 0,
+    "seed": 1,
+    "smoothing": false,
+    "fold_average": false
+  },
+  "05_真实逐步梯度.png": {
+    "runs": [
+      "A_Mamba_d64_f0_s1",
+      "B_Mamba_d64_f0_s1",
+      "C_Mamba_d64_f0_s1",
+      "A_Transformer_d64_f0_s1",
+      "B_Transformer_d64_f0_s1",
+      "C_Transformer_d64_f0_s1",
+      "A_GCN_d64_f0_s1",
+      "B_GCN_d64_f0_s1",
+      "C_GCN_d64_f0_s1"
+    ],
+    "source_file": "gradients.jsonl",
+    "width": 64,
+    "fold": 0,
+    "seed": 1,
+    "smoothing": false,
+    "fold_average": false
+  },
+  "06_实际学习率与更新.png": {
+    "runs": "A/B/C Mamba Transformer GCN d64f0s1",
+    "LR_source": "actual used_lr per epoch",
+    "updates": "actual optimizer step delta sampled every10steps only",
+    "no_interpolation": true
+  },
+  "07_前30轮验证loss.png": {
+    "runs": "A/B/C Mamba Transformer GCN d64f0s1",
+    "source": "actual first30 epoch records only"
+  }
+}
