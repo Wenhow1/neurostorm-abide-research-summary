@@ -1,0 +1,317 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>研究全景与方法审查 · 2026-10-30</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f7fa;color:#172334;font:16px/1.85 -apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif}header{background:#142b45;color:white;padding:34px max(5vw,24px)}header p{max-width:900px;color:#d8e5f1}h1{font-size:31px;margin:0}h2{font-size:26px}h3{font-size:22px;color:#183b60}h4{font-size:18px;color:#284d6c}a{color:#145ea6;text-underline-offset:3px}main{max-width:1500px;margin:auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:32px;padding:28px}nav{position:sticky;top:12px;align-self:start;max-height:95vh;overflow:auto;font-size:13px}nav a{display:block;padding:6px 9px;text-decoration:none;color:#334e67}.level1{font-weight:700;border-top:1px solid #ccd7e1;margin-top:9px}.level2{padding-left:15px}article{min-width:0}section{background:#fff;border:1px solid #e2e8ef;border-radius:9px;padding:24px 30px;margin-bottom:18px;scroll-margin-top:16px}.table-wrap{overflow-x:auto;margin:20px 0}table{border-collapse:collapse;min-width:650px;width:100%;font-size:14px;line-height:1.75}th,td{text-align:left;vertical-align:top;border:1px solid #d7e0e9;padding:10px 12px}th{background:#eaf0f6;color:#153a5d}tr:nth-child(even){background:#f7f9fc}blockquote{border-left:4px solid #4386bb;background:#f0f6fb;margin:15px 0;padding:16px 20px}code{font:13px/1.6 ui-monospace,monospace;background:#edf1f5;padding:2px 4px;overflow-wrap:anywhere}input{font:inherit;width:100%;padding:9px;border:1px solid #b8c8d8;border-radius:5px}.hint{font-size:12px;color:#53687c}footer{padding:20px;text-align:center;color:#5b6f83;font-size:13px}[hidden]{display:none!important}@media(max-width:900px){main{display:block;padding:12px}nav{position:static;max-height:none;margin:8px 0 18px}nav a{display:none}nav p{display:none}section{padding:18px}h1{font-size:25px}}@media print{nav,header input{display:none}main{display:block}section{border:none;padding:0}body{background:white}table{font-size:10px}a{color:inherit;text-decoration:none}h2,h3{break-after:avoid}}</style></head><body><header><h1>从二维MAE到三类骨干：研究全景与方法审查</h1><p>2026年9月—10月30日。按问题、协议和证据梳理工作，区分已知结果、方法限制、待检验假设与已经修复的工程事项。</p></header><main><nav aria-label="文档导航"><label for="search">全文筛选</label><input id="search" type="search" placeholder="例如：Mamba、覆盖、P0"><p class="hint">输入词语显示相关章节；清空后恢复全文。目录点击也会恢复全文。</p><a class="level1" href="#overview-1">从 NeuroSTORM 二维适配到 Mamba、Transformer 与图网络：研究全景与方法审查</a><a class="level2" href="#overview-2">先给出判断</a><a class="level2" href="#overview-4">1. 从开始到现在，实际做了哪些工作</a><a class="level2" href="#overview-5">2. 数据与评价口径是怎样变化的</a><a class="level2" href="#overview-6">3. 已完成实验真正说明了什么</a><a class="level2" href="#overview-14">4. 当前文献图网络到底补了什么</a><a class="level2" href="#overview-18">5. 方法和内容上最需要修正的事项</a><a class="level2" href="#overview-19">6. 如何回应老师：三个方向究竟哪个好</a><a class="level2" href="#overview-20">7. 收敛研究计划，不再无限扩支线</a><a class="level2" href="#overview-25">8. 可以直接用于向老师汇报的表述</a><a class="level2" href="#overview-26">附录：用方法而不是实验代号重新归类</a><a class="level2" href="#overview-27">来源与统计说明</a><a class="level1" href="#issues-1">方法与内容问题：逐项证据、影响和处理</a><a class="level2" href="#issues-2">核心结论与比较设计</a><a class="level2" href="#issues-3">表示、预训练与结构机制</a><a class="level2" href="#issues-4">数据质量、来源和泛化</a><a class="level2" href="#issues-5">统计、指标和结果解读</a><a class="level2" href="#issues-6">已修复与工程记录：不应反复当成当前科学阻塞</a><a class="level2" href="#issues-7">一个可控的后续问题结构</a><a class="level1" href="#sources-1">证据索引与可复核范围</a><a class="level2" href="#sources-2">一次来源与方法核对</a><a class="level2" href="#sources-3">本次新生成内容和未做的事</a></nav><article><section class="search-section" id="overview-1">
+<h2>从 NeuroSTORM 二维适配到 Mamba、Transformer 与图网络：研究全景与方法审查</h2>
+<p>版本：2026-10-30。历史范围：2026年9月启动至10月30日凌晨。当前实验状态以带时间的现场记录为准；本文中的后续建议没有自动变成新训练任务。</p>
+</section>
+<section class="search-section" id="overview-2">
+<h3>先给出判断</h3>
+<p>这项工作已经形成了三个相互关联、但不能混为一种实验的问题：<strong>静态功能连接的自监督表示是否有迁移价值；Mamba、Transformer、图网络的归纳偏置是否适合当前小样本任务；跨图谱信息和训练流程能否改善跨站点预测。</strong></p>
+<p>目前最稳妥的结论是：原始FC加正则化线性分类器是强参照；MAE重建改善不自动转化为ASD分类改善；保留ROI结构的读出优于简单全局平均这一点，在已有匹配分支中有实证支持；更复杂的微调、专家和融合没有形成跨设置、跨种子一致的优势。现有证据不足以宣布某个模型家族普遍最好或普遍无效。</p>
+<p>当前最需要补强的是<strong>论证的可识别性和最终确认</strong>，而不是继续扩充方法数量。我们已经做过许多技术和科学对照，但不同阶段的人群、图谱、输入、模型规模、选择标准和数据曝光历史不同，不能把它们拼成一张无条件的排行榜。</p>
+<h4>当前三个方向分别回答到哪里</h4>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>方向</th><th>已经得到的证据</th><th>现在能说什么</th><th>还不能说什么</th></tr></thead><tbody>
+<tr><td>Mamba</td><td>MAE、顺序/身份/位置编码、不同读出、监督迁移、小模型、冻结表示、双图谱融合均已研究</td><td>在静态FC上可训练，也存在预训练相对随机特征的局部收益；当前严格留站配方未稳定超过原始FC线性参照</td><td>不能因使用Mamba称为时序模型或基础模型；不能把一个配方的负结果推广到所有状态空间模型</td></tr>
+<tr><td>Transformer</td><td>与Mamba的上游重建、规模、读出、监督迁移、低秩微调及严格留站对照已做</td><td>某些同预算上游配方重建更好；下游差距小、依赖读出和训练配方</td><td>重建排名不能代替疾病分类排名；不能凭数个千分点判定结构优势</td></tr>
+<tr><td>图网络</td><td>基础GCN传播对照、290人适配图模型、AAL116 BrainGNN正式实验已完成；Schaefer100文献流程正在正式训练</td><td>旧GCN的特定传播存在负向机制信号；文献流程需要单独评价</td><td>不能把旧GCN失败等同所有图网络失败；当前Schaefer尚无最终成绩，AAL结果也不能替代它</td></tr>
+</tbody></table></div>
+</section>
+<section class="search-section" id="overview-4">
+<h3>1. 从开始到现在，实际做了哪些工作</h3>
+<p>下表按研究阶段归类。阶段之间有重叠，不表示所有任务严格串行。<code>fit</code>指一次配置在一个训练划分上的拟合，不是一个独立人群；缓存、评估、复用结果也不能都算成“新实验”。</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>阶段</th><th>目的与完成内容</th><th>主要证据/产出</th><th>需要保留的边界</th></tr></thead><tbody>
+<tr><td>1. 论文与源码起点，9月</td><td>阅读NeuroSTORM正文、补充材料和固定源码；解释SWM/Mamba、STRD、prompt、编码器/解码器与迁移流程；建立公式、形状和代码对应</td><td>固定作者源码、数学与代码研读包、组会图源与讲稿 [E01]</td><td>原论文直接处理4D fMRI；本项目后来选择116×116静态FC，属于二维适配</td></tr>
+<tr><td>2. 初始二维MAE，9月下旬</td><td>把3D/4D模块改写为二维patch、合并/展开和重建；成对对称遮挡；MAE后比较scratch、全量微调、冻结头、prompt；小骨干、正则化和特征诊断</td><td>9月28日各系列真实报告、三种子记录 [E02]</td><td>早期608是数据行数，独立身份未充分核实；反复使用61行验证，属于探索性结果</td></tr>
+<tr><td>3. 原生相关FC、旧698与官方结构适配，10月上旬</td><td>处理非有限矩阵、区分不同历史划分，比较二维重叠patch、尺度、decoder与官方结构配置</td><td>O698/E1P4等历史审计与谱系 [E03]</td><td>823文件中125非有限后698有限，不等于全影像QC；558是某次开发划分人数，不是另一轮质量筛除</td></tr>
+<tr><td>4. NIAK795正式批次，10月中旬</td><td>正式90次、M90新增90次、固定学习率81次及C48等受控诊断；比较checkpoint、调度、梯度和更新</td><td>完成证书、最终报告、版本归档 [E04]</td><td>M90的90次新增拟合不等于90次新外层评价；质量flags与既有结果边界保留</td></tr>
+<tr><td>5. 数据来源与质量重建，10月20日起</td><td>ABIDE I四预处理流程、时长/头动/空间覆盖、重复文件与质量标记审查；ABIDE II资料与运动掩码可行性；确定C-PAC AAL116数据路线</td><td>逐阶段队列与QC依据，1112→1102→1014→986→968→966 [E05]</td><td>时长为发布帧数×参考TR口径；不把候选筛查、临床质量和正式训练混为一谈；ABIDE II未据此自动开新实验</td></tr>
+<tr><td>6. C-PAC MAE系统研究，10月21—23日</td><td>610人上游/290人下游/原66人留出；五折双种子；Mamba/Transformer、小大模型、固定LR/调度；patch与ROI token、位置/身份/顺序、decoder和mask诊断</td><td>230次上游拟合、18次完整610人重拟合、37组下游评价 [E06]</td><td>部分结构诊断仅三折先导；大模型同时改变部分decoder容量，不是纯骨干容量单变量</td></tr>
+<tr><td>7. 表示和读出诊断，10月23—25日</td><td>审计全局平均丢失的跨人差异；比较ROI展平、LR/SVM/MLP、随机与预训练编码器；残差相关目标、双视图ROI一致性目标</td><td>99组分类读出、8组表示缓存；两个新目标各有独立上游/下游核验 [E07–E09]</td><td>方差损失不是疾病信息损失；MLP部分拟合有收敛告警；不同分支raw-FC基线口径不同</td></tr>
+<tr><td>8. 微调和复杂读出，10月26—27日</td><td>scratch/预训练监督迁移、BNT；冻结特征线性头/adapter/等权专家/学习门控；LoRA、DoRA、注意力池化、TabPFN、BrainNetCNN与早期BrainGNN适配；专家机制和训练规模诊断</td><td>MoE 960内层+160外层；LoRA 480+80；追加神经1200+200，表格1680+160，均完成核验 [E10–E13]</td><td>290人反复开发；早期图输入是静态FC适配，并非后来的LedoitWolf文献输入；TabPFN基础预训练是否涉及ABIDE未独立核实</td></tr>
+<tr><td>9. DirectFC监督小模型，10月27—28日</td><td>Mamba/Transformer/GCN小骨干，固定LR、平台降LR、头部Dropout；宽度、深度、WD与GCN传播强度；真实loss/梯度/更新和恢复检查</td><td>v1.3共237次拟合、7模型冻结；193人测试在该协议中未评分 [E14]</td><td>开发得分参与选参，不是独立测试；这些对象在全项目其他实验中的曝光不能被“本协议锁定”消除</td></tr>
+<tr><td>10. 严格960跨站点与统计流程，10月28日</td><td>AAL/CC200/双图谱、19站点留一；时间序列简单特征、站点/头动/人口学参照、训练侧去混杂；校准、阈值、收缩、块权重、划分稳定性与例外样本来源</td><td>多图谱、站点头动、校准、加权收缩等报告 [E15–E18]</td><td>混站五折与整站点留出回答不同问题；71%等最高开发分支不是通用外部性能保证</td></tr>
+<tr><td>11. 同一960上的骨干与融合复核，10月29日</td><td>拒绝复用不匹配的773人权重，重训留站Transformer/GCN；监督Mamba/T/GCN冻结表示+统一LR；概率融合、特征拼接、双分支Mamba</td><td>严格同人群与训练ID/权重哈希核验，三种融合完成 [E19–E20]</td><td>这里的“冻结编码器”由监督训练获得，不能写成MAE预训练证据；三类融合未形成稳定综合优势</td></tr>
+<tr><td>12. 文献图网络与新图谱，10月29—30日</td><td>核对BrainGNN作者实现、FS公式及未指定细节；AAL正式独立分类；下载960份C-PAC BOLD并提取Schaefer100；全量mask、坐标与代表/最差叠加审查；封存三组训练方案</td><td>AAL完成且终审通过；Schaefer数据层有条件放行、真实六路/恢复/冻结评分门槛通过，722次正式拟合已启动 [E21–E23]</td><td>完整文献流程比较，不是只换骨干；C-PAC适配不能冒充FS原文fMRIPrep复现；低覆盖flags保留</td></tr>
+<tr><td>13. 研究工程与可复现交付，全程</td><td>受试者/划分哈希、训练侧预处理、每轮/每步真实记录、检查点与RNG恢复、队列锁、预算温控、CPU/GPU资源协调、数据搬迁和原始档案保留；谱系、中文报告与图源交接</td><td>本地实验谱系、归档回执、真实图源、冻结协议与独立复算 [E24]</td><td>训练完成、审核通过、报告完成、备份完成是不同状态；工程验证不是疾病性能结果</td></tr>
+</tbody></table></div>
+<p>没有把上述数字求和为“全项目总实验数”：历史任务有续跑、复用、重复登记和不同统计单位，直接相加会夸大独立证据量。完整流水若需计数，应先按数据/划分/配置/种子/源码/恢复链去重。</p>
+</section>
+<section class="search-section" id="overview-5">
+<h3>2. 数据与评价口径是怎样变化的</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>口径</th><th>对象与用途</th><th>评价方式</th><th>可以支持的结论</th></tr></thead><tbody>
+<tr><td>早期608行</td><td>初始工程与探索</td><td>小验证集，身份独立性待核实</td><td>模块是否工作、过拟合和类别偏向等先导现象</td></tr>
+<tr><td>旧698/O698、558开发子集</td><td>有限矩阵与官方结构二维适配</td><td>多种历史划分分别保存</td><td>相应固定协议内的结果；不能越界合并</td></tr>
+<tr><td>NIAK795</td><td>接受披露flags的旧正式路线</td><td>该批次封存协议</td><td>当时NIAK输入/划分下的证据</td></tr>
+<tr><td>C-PAC966的610/290/66角色</td><td>上游预训练、下游迁移、原留出</td><td>上游五折、下游十折及嵌套选择</td><td>当时上游与下游分离的迁移研究；66后续进入其他研究后不再全项目未见</td></tr>
+<tr><td>773开发/193锁定</td><td>DirectFC小模型开发</td><td>五折开发、锁定193终点</td><td>开发选模与机制对照；不能把193称全项目从未使用</td></tr>
+<tr><td>严格960</td><td>AAL、CC200共同可用对象；6人按CC200常数ROI问题暂缓</td><td>混站五折和19LOSO分别标注</td><td>同协议的跨图谱、骨干、融合和留站评价</td></tr>
+<tr><td>固定960的Schaefer100</td><td>当前C-PAC BOLD本地提取；同一19站点</td><td>外层19LOSO、内层3站点组、训练侧选择</td><td>文献流程适配的未见站点评价；已有开发曝光边界仍披露</td></tr>
+</tbody></table></div>
+<p><strong>不能通过事后换一个划分名字重新获得独立性。</strong> 某次训练没有读到自身外层数据，是运行内隔离；研究者在以往分支反复看过同批对象表现，是研究层面的开发曝光。两者需要同时报告，不能相互抵消。</p>
+</section>
+<section class="search-section" id="overview-6">
+<h3>3. 已完成实验真正说明了什么</h3>
+<h4>3.1 重建目标与疾病目标存在差距</h4>
+<p>早期、NIAK和C-PAC多个阶段都出现“重建更好、分类未同步提高”的现象。C-PAC同固定LR的50轮上游比较中，Transformer重建MSE低于Mamba，但后续全局平均读出分类没有形成相应的大幅优势。延迟降采样也曾改善MSE而降低其内部分类AUROC。[E04, E06]</p>
+<p>这支持把MAE看作一个需要验证的表示学习假设。FC中强、稳定、容易重建的变异可能包括个体总体连接强度、采集/站点和正常组织结构；重建目标并未被定义为“只保留ASD相关信息”。当前证据不能唯一判定失败由目标、样本量、读出、模型或数据质量中的哪一项造成。</p>
+<h4>3.2 全局平均确实会损失可用于读出的ROI差异，但不能把方差等同疾病信息</h4>
+<p>610/290同分支、固定LR读出：小Mamba由全局平均AUROC约0.6458到展平0.6797；小Transformer由0.6455到0.6831。两个种子的改进方向一致。大模型的展平也优于各自全局平均。[E07]</p>
+<p>因此，“最初下游只用一个平均向量可能是瓶颈”有实证依据。但平均与展平还改变维度和有效正则化；这不是纯粹只改变信息而其他因素完全不变的实验。跨人ROI变化中约56%—61%的能量在平均后消失，描述的是表征方差，不是56%—61%的疾病信息被丢弃。</p>
+<h4>3.3 换预训练目标或加复杂头，没有得到一致收益</h4>
+<ul>
+<li>残差相关目标分支：小Mamba原目标/新目标AUROC约0.6797/0.6726；小Transformer约0.6831/0.6809。仅支持该权重与协议未获益。[E08]</li>
+<li>ROI双视图一致性分支：小Mamba原目标/一致性约0.6864/0.6631；小Transformer约0.6816/0.6759。这里引用本分支自己的base，不与上一分支混算。[E09]</li>
+<li>冻结MoE分支：小Mamba线性/MoE约0.6807/0.6783；小Transformer约0.6831/0.6807。普通adapter或等权专家也没有形成稳定优胜。[E11]</li>
+<li>LoRA和DoRA已完成，不再是“等待实验”。LoRA分支的线性头与MoE头、DoRA对应组合的差异小且依赖种子/配方；不能由此宣布低秩微调普遍无效。[E12–E13]</li>
+<li>注意力池化在某些种子改善，在另一些种子明显恶化；TabPFN某些固定表示接近raw FC参照，但嵌套训练侧选表示的结果并未自动等于事后最高外层分数。外部基础模型预训练重叠另有不确定性。[E13]</li>
+</ul>
+<h4>3.4 小样本监督训练的主要问题包括后期概率过拟合，而非“还没训够”</h4>
+<p>DirectFC开发中，神经模型多数共同最佳轮次较早；平台降LR能明显缓解后期验证BCE恶化，却没有同步大幅提高早期最佳AUROC。监督迁移研究的选中轮次中位数约4—7轮，预训练相对scratch的收益也不跨种子一致。[E10, E14]</p>
+<p>这意味着“继续把同一个模型训练更久”不是已有证据支持的默认修复。训练BCE、验证BCE、AUROC、校准和真实参数更新应分别解释；梯度范数小或loss曲线平稳并不证明泛化好。</p>
+<h4>3.5 旧GCN传播对照有价值，但适用范围明确</h4>
+<p>在DirectFC开发的配对诊断中，参数、初始化、输入、训练轮次不变，只把传播矩阵改为单位阵；64通道固定第8轮AUROC约由0.6927到0.7259，128通道约0.6891到0.7110，多数配对同向。[E14]</p>
+<p>这是当前特定正边建图和两层传播可能损害读出的证据。它没有唯一证明过平滑；也没有检验所有带符号图、不同边估计、稀疏度、ROI感知池化或功能系统引导图。单位传播保留完整FC节点输入，不能写成“没有连接信息的模型”。</p>
+<h4>3.6 最有参考价值的严格960比较，应单列而不是与旧最高分合并</h4>
+<p>以下来自同一批固定960、19LOSO、固定10轮监督骨干及统一冻结读出分支；神经结果先各自种子评价再平均。AUROC为该报告的跨站合并口径，BA为整体口径。[E19]</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>模型/表示</th><th>ACC</th><th>整体BA</th><th>AUROC</th><th>BCE</th></tr></thead><tbody>
+<tr><td>AAL原始FC＋LR</td><td>66.67%</td><td>66.53%</td><td>0.7334</td><td>0.6207</td></tr>
+<tr><td>AAL＋CC200原始FC＋LR</td><td>69.06%</td><td>68.95%</td><td>0.7588</td><td>0.6096</td></tr>
+<tr><td>Mamba原监督分类头</td><td>66.67%</td><td>66.47%</td><td>0.7193</td><td>0.6865</td></tr>
+<tr><td>监督训练后冻结Mamba＋LR</td><td>66.35%</td><td>66.21%</td><td>0.7171</td><td>0.6683</td></tr>
+<tr><td>Transformer原监督分类头</td><td>65.94%</td><td>65.75%</td><td>0.7236</td><td>0.7039</td></tr>
+<tr><td>监督训练后冻结Transformer＋LR</td><td>64.84%</td><td>64.76%</td><td>0.7082</td><td>0.7080</td></tr>
+<tr><td>GCN原监督分类头</td><td>64.53%</td><td>64.23%</td><td>0.6989</td><td>0.6797</td></tr>
+<tr><td>监督训练后冻结GCN＋LR</td><td>63.75%</td><td>63.62%</td><td>0.6909</td><td>0.6816</td></tr>
+</tbody></table></div>
+<p>这里支持的是：<strong>在这套固定配方里，所学表示及其读出没有胜过raw FC线性参照；双图谱raw FC也比单图谱更有竞争力。</strong> 它不是三类骨干经过同等充分优化后的性能上限，也没有单独识别“架构”造成的全部差异。</p>
+<p>三种融合已经完成：50%概率融合ACC约69.84%、AUROC约0.7500；特征拼接LR约67.97%/0.7403；双分支Mamba约69.32%/0.7530。参照双图谱raw LR约69.06%/0.7588。概率融合ACC略高但AUROC和BCE没有同步改善；双分支两个种子的ACC相对参照方向也不一致。[E20]</p>
+<h4>3.7 校准、阈值、协变量和收缩不是空白，但也没有解决全部泛化问题</h4>
+<p>已经做过站点、头动和人口学参照及训练侧去混杂，不应再笼统说“完全没检查混杂”。简单站点/头动模型能提供预测信号，说明需要注意这些因素，但不能由此认定当前FC成绩全部由混杂造成。[E16]</p>
+<p>校准分支的Brier、log loss和ECE改善，而阈值分类ACC未改善。该分支还给校准/阈值留出了训练样本，不能把它相对历史大训练集参照的全部下降归因于校准。Brier和log loss同时反映可靠性、区分度与数据不确定性，并非纯校准指标。[E17, M03]</p>
+<p>加权/收缩分支有约70.73% ACC、70.64%整体BA的开发候选。它应与自身同协议参照配对解释；不能覆盖其他分支结果，也不能把特征块的平方根缩放解释成25%/75%的“预测贡献”。[E18]</p>
+</section>
+<section class="search-section" id="overview-14">
+<h3>4. 当前文献图网络到底补了什么</h3>
+<h4>AAL116：独立正式实验已完成，结果已审核</h4>
+<p>固定960、19LOSO、训练内3站点折、双种子、两学习率、最多100轮，228内层与38重拟合完整核验；38个最终模型全部冻结后才完成外层评分。发布源文件1944份及选择、阈值、样本覆盖、模型/评分哈希独立复核通过。[E21]</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>AAL116 BrainGNN，两种子均值</th><th>结果</th></tr></thead><tbody>
+<tr><td>主要指标：站点等权BA，训练OOF阈值</td><td>57.53%</td></tr>
+<tr><td>整体ACC，同一阈值规则</td><td>58.23%</td></tr>
+<tr><td>整体BA</td><td>57.95%</td></tr>
+<tr><td>合并AUROC</td><td>0.6180</td></tr>
+<tr><td>站点等权AUROC</td><td>0.6389</td></tr>
+<tr><td>BCE</td><td>0.8177</td></tr>
+</tbody></table></div>
+<p>预定固定0.5阈值补充ACC约59.11%，不能看到它更高后反选为主规则。AAL版n=116，67,746参数；作者兼容性中逐元素比对的完整CPU网络是n=100的合成检查，不能误写成116人群训练完全等于原CUDA二进制。AAL正式结果不与旧固定10轮raw LR作纯结构因果比较。</p>
+<h4>Schaefer100：正在跑的三组是完整流程比较</h4>
+<p>统一960和19站点，比较FC+LR、BrainGNN100、FS-GNN100。总722次拟合：627内层与95最终重拟合；全部三组95个最终模型和训练侧配置共同冻结后，才开放真实外层评分。本文状态快照为2026-10-30 02:49：LR内层171与重拟合19完成，BrainGNN内层102/228完成，正式队列健康运行；这不是最终疾病结果。[E23]</p>
+<ul>
+<li>LR：Pearson Fisher-z上三角4950维，训练侧StandardScaler，C为1/10/100。</li>
+<li>BrainGNN100：保留作者ROI感知投影、图传播和池化/损失核心；节点为逐人标准化LedoitWolf相关，边为原始时序LedoitWolf偏相关的绝对Fisher-z；学习率0.001/0.01。</li>
+<li>FS-GNN100：按论文公式本地实现功能系统编码与组稀疏等机制；学习率0.001/0.005，固定两稀疏项系数0.001/0.002。未找到作者代码；9,603参数与论文约9.8K差异如实披露。</li>
+</ul>
+<p>三个输入/建图配方并不完全相同，故回答的是<strong>同队列、同留站框架下各文献流程的表现</strong>。当前没有Schaefer Mamba和Transformer对应组；不能把这轮图网络与上一节AAL三骨干直接拼成“同输入全家桶”。</p>
+<h4>Schaefer质量审查为什么耗时，以及结论是什么</h4>
+<p>已完成960个BOLD/时序/FC/节点/边来源、身份、帧数和哈希核验；960官方mask同网格、二值、每ROI非零，时间序列有限且非恒定。独立坐标索引与物理最近邻重采样完全对应；参考模板支持和左右半球质心正确；固定及最低覆盖的6例三平面叠加未见明显全脑翻转或整体位移。[E22]</p>
+<p><strong>806/960人至少一个ROI的官方mask覆盖低于50%，959/960低于80%。</strong> 主要在腹侧额叶、眶额和颞极，最小个体ROI约2.65%。50%/80%只是描述阈值；不能据此认定806人无效。官方mask与早先“非恒定体素占比”的349人统计不是同一种指标。</p>
+<p>当前放行的是固定人群、原全标签体素均值的本地计算适配，覆盖flags全部保留；没有删人、补零或按结果选择提取法，也没有证明所有人的全部ROI优质。官方mean/mask自身可见低信号支持覆盖边界的解释，但无法唯一归因为采集或预处理。全标签均值约定与旧C-PAC ROI代码相符，Schaefer的2→3mm物理映射仍属于本地适配，不能称FS原文fMRIPrep的逐字复现。</p>
+</section>
+<section class="search-section" id="overview-18">
+<h3>5. 方法和内容上最需要修正的事项</h3>
+<p>详细逐项证据、影响与处置见<a href="方法问题与处置清单.md">问题清单</a>。这里给出优先级：</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>优先级</th><th>问题</th><th>现状判断</th><th>应怎样处理</th></tr></thead><tbody>
+<tr><td>P0</td><td>“基础模型”与当前静态FC分类证据不匹配</td><td>论证边界已明确，仍需统一全文措辞</td><td>现阶段称静态FC表示/分类研究；预训练迁移是其中一条研究问题，不因骨干名字授予基础模型属性</td></tr>
+<tr><td>P0</td><td>跨协议排行榜混淆人群/图谱/预处理/评价单位</td><td>历史分支客观存在，不能事后抹平</td><td>主表只放匹配比较；其他数据按阶段、协议分表</td></tr>
+<tr><td>P0</td><td>研究层面的反复开发曝光</td><td>无法靠新划分或新脚本消除</td><td>当前结果称开发/探索性验证；下一次最终确认需独立来源或真正保留的确认数据</td></tr>
+<tr><td>P0</td><td>同一结果同时改变token、容量、decoder、读出/正则化</td><td>部分旧实验属于整配方比较</td><td>报告为流程差异；机制结论只依据配对单变量对照</td></tr>
+<tr><td>P1</td><td>重建目标与分类目标是否一致</td><td>已有不一致证据，原因尚未唯一定位</td><td>分别评价表示迁移与上游重建；不要以分类结果回选原来封存的上游模型</td></tr>
+<tr><td>P1</td><td>GCN建图/传播是否适合FC行特征</td><td>旧开发传播对照提示问题，新图流程待结果</td><td>区分边估计、符号、稀疏化、聚合和池化；不直接宣判图路线失败</td></tr>
+<tr><td>P1</td><td>表征维度、缩放与分类器正则化耦合</td><td>对展平/平均、多块拼接尤为重要</td><td>同C不等于同有效正则化；下一轮预先锁匹配搜索或解释为完整读出配方</td></tr>
+<tr><td>P1</td><td>种子、交叉验证折、站点、受试者的统计单位</td><td>已有大量技术重复，独立生物样本没有同倍增加</td><td>保留配对与层级，报告站点异质性和效应不确定性；不把上千次fit当独立n</td></tr>
+<tr><td>P1</td><td>主指标和阈值选择随阶段变化</td><td>当前已冻结，历史仍需标明</td><td>站点宏平均与整体指标并列；0.5与训练OOF阈值分清，不按外层表现反选</td></tr>
+<tr><td>P1</td><td>Schaefer腹侧低覆盖及方法适配</td><td>数据层已放行，质量限制仍存在</td><td>保留flags与来源，不把放行写成每ROI都良好；敏感性问题需另行预设而非挑性能</td></tr>
+<tr><td>P1</td><td>缺乏一次最终、匹配、确认性的三方向比较</td><td>已有严格AAL固定配方；当前Schaefer文献流程解决另一问题</td><td>主队列完成后再决定是否需一个小而清晰的共同输入锚点，不立即追加全量搜索</td></tr>
+<tr><td>P2</td><td>结果组织过于按模型名字堆叠</td><td>材料丰富、主问题容易失焦</td><td>按“为什么做—比较什么—结果支持什么—下一步”整理，保存负结果与停止理由</td></tr>
+</tbody></table></div>
+<p>“尚缺”不等于“现在必须启动”。例如当前722次训练、三组统一冻结评分、独立审计应先按既定协议完成；不得因为这次审查又临时换学习率、覆盖准入或外层阈值。</p>
+</section>
+<section class="search-section" id="overview-19">
+<h3>6. 如何回应老师：三个方向究竟哪个好</h3>
+<p>建议把问题拆成四句可检验的研究问句：</p>
+<ol>
+<li><strong>预训练有没有价值？</strong> 同一输入/下游读出下，预训练编码器相对随机编码器、scratch和raw FC是否提供稳定增益？现有答案是局部有、整体不一致。</li>
+<li><strong>哪种归纳偏置适合这个任务？</strong> 在同人群、同输入、同划分、合理且预先固定的选择预算下，序列状态空间、注意力和图传播谁更稳健？已有AAL固定配方对照，但不能据此宣称全家族上限。</li>
+<li><strong>收益来自学习表示，还是新增输入信息？</strong> AAL/CC200融合收益要与直接双图谱FC比较；神经融合不能仅与单图谱模型比。</li>
+<li><strong>收益能否跨站点并给出可信概率？</strong> 既看主要站点平均BA，也看小站点波动、合并/站点AUROC、敏感度/特异度与BCE，避免只取最高ACC。</li>
+</ol>
+<p>对三个方向的阶段性安排可以是：<strong>raw FC线性流程保留为每一阶段的锚点；Mamba和Transformer保留为受控表征对照；图网络完成当前文献流程评价后，再决定是否深入建图/传播机制。</strong> 这比先认定一个复杂模型必须胜出更符合现有证据。</p>
+<p>静态FC矩阵上的Mamba沿ROI/token顺序扫描，并非沿fMRI时间轴建模；Transformer关注脑区token也不自动成为时序模型。若未来转向原始时序，那是输入与科学问题的新阶段，应单独封存数据和预算，而不是给当前静态任务换一个名字。</p>
+</section>
+<section class="search-section" id="overview-20">
+<h3>7. 收敛研究计划，不再无限扩支线</h3>
+<h4>立即执行：完成已有承诺</h4>
+<p>当前Schaefer队列继续GPU1最多6并行，GPU0不使用；沿用原启动时间、温控、显存与预算。先跑完LR→BrainGNN→FS→95模型统一冻结→外层评分→独立审计。AAL原结果保留，不重跑。并行整理来源、方法差异、真实曲线与中文报告。</p>
+<h4>结果审计之后：先做证据表，再选一个问题</h4>
+<p>制作一张“协议—输入—训练人数—选择预算—主指标—开发曝光—来源”的主结果表；只有同口径结果横向比较。保留两个种子和全部站点，不挑最好种子、不删低分站点、不以补充阈值替换预定主阈值。</p>
+<p>如果三组结果仍未超过强线性参照，优先研究：图传播是否损伤已有FC信息、预训练是否保留与疾病有关的个体差异、以及收益是否只来自图谱/输入变化。三者中选一个主假设；每个新实验只需能区分竞争解释的最小对照。这里提出的是待讨论计划，未启动新训练。</p>
+<h4>最终确认：需要新的独立证据</h4>
+<p>现有ABIDE I反复开发材料可以构成系统方法比较，但不足以独立确认泛化。ABIDE II或其他外部队列需先核对预处理、标签和人群定义，再锁定训练、调参、阈值与最终评价流程；若无合适外部数据，准确表述为内部/留站开发评价，不把它包装成外部验证。</p>
+<h4>暂时不值得继续的工作</h4>
+<ul>
+<li>不因重建MSE略降就扩展大模型或继续叠加新模块。</li>
+<li>不在已有分数上反复试外层阈值、挑最好种子或寻找最高的一张表。</li>
+<li>不把更密的训练日志、更多曲线当成更多独立科学证据。</li>
+<li>不在当前正式训练中途换图谱、mask归一化、协方差估计或选轮规则。</li>
+<li>不在主结果核验前自动启动额外图模型、时序模型或未封存的消融预算。</li>
+</ul>
+</section>
+<section class="search-section" id="overview-25">
+<h3>8. 可以直接用于向老师汇报的表述</h3>
+<blockquote>我们最初从NeuroSTORM出发，把4D方法适配为静态功能连接上的二维遮挡重建，随后系统检查了骨干、遮挡、token、读出、预训练目标和微调方式。多轮结果显示，上游重建改善与疾病分类收益并不一致；保留ROI结构的读出比简单全局平均更有利，但复杂表示和复杂头尚未稳定超过正则化原始FC基线。后续在固定960人和19站点留一框架下，比较了Mamba、Transformer、基础GCN和多图谱融合，并发现需要区分输入信息增益与骨干本身的作用。现在正在完成Schaefer100上的LR、BrainGNN和FS-GNN文献流程比较。下一步先完成冻结评分和独立审计，再围绕一个明确机制问题补最小对照；最终泛化需要独立数据确认。</blockquote>
+</section>
+<section class="search-section" id="overview-26">
+<h3>附录：用方法而不是实验代号重新归类</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>方法层</th><th>已经做过的内容</th><th>这一层实际改变什么</th><th>不能混淆的概念</th></tr></thead><tbody>
+<tr><td>输入与预处理</td><td>AAL116、CC200、Schaefer100；相关/偏相关、Fisher-z、LedoitWolf/OAS/收缩、单图谱/多图谱</td><td>模型看到的信号及噪声估计</td><td>换图谱、换边估计不是只换骨干</td></tr>
+<tr><td>token化</td><td>重叠patch、ROI行token、层级合并/延迟降采样</td><td>将FC怎样划分和组织成模型输入</td><td>一个ROI行已含全脑连接，单位传播不是无FC信息</td></tr>
+<tr><td>位置与身份</td><td>网格PE、ROI身份、真实坐标边几何、固定/随机ROI顺序</td><td>模型对身份、位置和次序的先验</td><td>ROI身份不是空间坐标；ROI扫描不是时间轴</td></tr>
+<tr><td>遮挡与自监督任务</td><td>成对镜像、raw输入先mask、共同边预算、ROI行列/块mask、MSE、残差相关和双视图一致性</td><td>模型要重建或保持什么</td><td>mask率、STRD和Dropout是不同机制</td></tr>
+<tr><td>骨干结构</td><td>二维SWM/Mamba、ROI双向Mamba、非因果Transformer、基础GCN、BNT及文献BrainGNN/FS-GNN</td><td>token间信息混合与归纳偏置</td><td>同名家族在规模、输入和训练方式上可以不同</td></tr>
+<tr><td>decoder与读出</td><td>二维可学习展开/重叠平均、decoder对照、全局平均/分区/展平/注意力</td><td>重建表达能力与下游信息压缩</td><td>下游绕过decoder时，重建收益未必通过decoder迁移</td></tr>
+<tr><td>迁移方式</td><td>scratch、预训练全量微调、冻结编码器、prompt、adapter、LoRA/DoRA</td><td>哪些参数能用标签更新</td><td>监督后冻结的特征不是自动属于自监督预训练</td></tr>
+<tr><td>融合与专家</td><td>原FC特征拼接、预测概率平均、双分支网络、等权/学习门控双专家</td><td>利用新增信息、模型互补或可训练组合</td><td>特征权重不是因果贡献；稠密双专家不是稀疏计算优势</td></tr>
+<tr><td>分类器与优化</td><td>LR/SVM/MLP/TabPFN；Adam/AdamW、固定LR/调度、WD/Dropout/裁剪、早轮选择</td><td>函数约束、估计稳定性和优化路径</td><td>损失、优化器、调度器和评价指标不是同一件事</td></tr>
+<tr><td>验证与可靠性</td><td>嵌套选择、混站/留站、训练侧阈值/校准、协变量和输入质量敏感性</td><td>结果对新样本/站点的适用范围</td><td>提高ACC、提高AUROC和改善校准可能方向不同</td></tr>
+<tr><td>工程可信度</td><td>来源/身份/划分哈希、权重加载审计、逐步梯度/更新、RNG恢复、统一队列、独立复算</td><td>确保实际执行与所述方法一致</td><td>工程PASS不等于科学假设成立</td></tr>
+</tbody></table></div>
+<p>这份分类有助于决定后续只动哪一层。当前结果若不能解释，先定位到输入、表示、传播、读出或评价中的一个层面，再设计对照，避免一次改动覆盖所有层。</p>
+</section>
+<section class="search-section" id="overview-27">
+<h3>来源与统计说明</h3>
+<p><a href="证据索引.md">证据索引</a>列出E01—E24对应的报告、版本、完成证据和使用范围；<a href="方法问题与处置清单.md">问题清单</a>逐项标记已确认问题、待检验假设及已修复工程事项。公开材料只含研究流程与汇总，不包含个体身份、原始时序/FC、逐人预测、权重或私有服务器清单。</p>
+<p>本次是基于已保存报告、原始汇总/核验回执和当前状态的回顾性审查，没有新增训练、重算新的显著性检验或构造置信区间。“没有稳定优势”指当前配方和观察范围，不能读成统计等效性证明。跨折、种子和站点的依赖关系必须在后续推断中处理。</p>
+<p>方法依据：</p>
+<ul>
+<li><a href="https://arxiv.org/abs/2506.11167">NeuroSTORM原论文预印本及版本入口</a>：4D输入与跨任务迁移的原研究范围；发表版DOI为10.1038/s41551-026-01666-y。[M01]</li>
+<li><a href="https://jmlr.csail.mit.edu/papers/v11/cawley10a.html">Cawley与Talbot，模型选择过拟合与评价偏差，JMLR 2010</a>：反复选择有限验证指标可能产生偏差；不是本项目偏差大小的估计。[M02]</li>
+<li><a href="https://scikit-learn.org/stable/modules/calibration.html">scikit-learn概率校准说明</a>：Brier/log loss不只测量校准；本文据此限制校准结论。[M03]</li>
+<li><a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html">scikit-learn嵌套交叉验证示例</a>：区分训练侧选择和外层评价；它不能消除整个研究历史的适应性曝光。[M04]</li>
+</ul>
+</section><section class="search-section" id="issues-1">
+<h2>方法与内容问题：逐项证据、影响和处理</h2>
+<p>版本2026-10-30；这是研究审查，不是宣布全部旧实验无效，也不自动授权追加训练。P0影响核心结论；P1影响可信度或机制解释；P2影响组织与交付。状态分为“已确认限制”“待检验解释”“已做/已修复”，不要混用。</p>
+</section>
+<section class="search-section" id="issues-2">
+<h3>核心结论与比较设计</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>编号/优先级</th><th>问题与状态</th><th>现有依据</th><th>影响</th><th>建议与是否需新训练</th></tr></thead><tbody>
+<tr><td>Q01 P0</td><td>基础模型称谓超出当前证据；已确认限制</td><td>静态116/100ROI FC、单一ASD下游，与NeuroSTORM原4D跨任务规模不同 [E01,E06]</td><td>架构名称和MAE不能单独确立基础模型属性</td><td>统一为静态FC表示/分类研究；基础模型作为研究动机。现在只需修订论证</td></tr>
+<tr><td>Q02 P0</td><td>把所有历史分数并为排行榜；已确认限制</td><td>608行、698、795、610/290/66、773/193与960不是同协议 [E02–E05,E14–E23]</td><td>无法把变化归因于模型，最高数不代表最强模型</td><td>分协议表和来源账；主表只放匹配比较。无需新训练</td></tr>
+<tr><td>Q03 P0</td><td>研究层面适应性开发；已确认限制</td><td>同ABIDE对象反复用于读出/结构/阈值设计，原66后来进入总体实验 [E06,E24]</td><td>单次运行的外层隔离不能重置研究历史</td><td>披露开发暴露，保留现有流程；外部确认另立协议，不立即开跑</td></tr>
+<tr><td>Q04 P0</td><td>多因素同时变化；已确认限制</td><td>容量与decoder、输入与图谱、归一化与读出、搜索预算同时变化 [E06,E14,E23]</td><td>整配方结果不能写成某模块的因果收益</td><td>区分完整流程评价与机制消融；未来仅针对主假设做最小单因素对照</td></tr>
+<tr><td>Q05 P1</td><td>老师要的三方向比较尚无唯一最终表；部分已有</td><td>严格960固定配方已有Mamba/T/GCN；新Schaefer是LR/Brain/FS [E19,E23]</td><td>两张表不能直接拼为同图谱三骨干排名</td><td>先完成当前主队列；是否新增共同输入锚点应依据明确研究问题和另封存预算</td></tr>
+<tr><td>Q06 P1</td><td>调参预算与候选优化程度不完全对称；已确认限制</td><td>部分旧分支不同LR范围、分类器搜索、固定10轮与训练侧选轮并存 [E10,E13,E19]</td><td>固定配方排名不等于各架构经过充分调优后的上限</td><td>报告候选和实际预算；不把固定10轮结果称“最佳可能性能”</td></tr>
+</tbody></table></div>
+</section>
+<section class="search-section" id="issues-3">
+<h3>表示、预训练与结构机制</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>编号/优先级</th><th>问题与状态</th><th>现有依据</th><th>影响</th><th>建议与是否需新训练</th></tr></thead><tbody>
+<tr><td>Q07 P1</td><td>重建目标可能偏离分类信息；不一致已确认、原因待检验</td><td>多个阶段MSE改善未带来分类改善 [E04,E06,E08,E09]</td><td>无法仅靠MSE选出疾病最优表示</td><td>上游按预定目标选择，分类独立评价；不要以外层疾病表现回选上游</td></tr>
+<tr><td>Q08 P1</td><td>全局平均可能压缩关键ROI差异；部分实证支持</td><td>同分支展平优于平均，但维度/正则化同时改变 [E07]</td><td>支持读出问题，不足以计算丢失多少疾病信息</td><td>保持效应与解释边界；未来匹配正则化后验证，不再重复未改变条件的平均对照</td></tr>
+<tr><td>Q09 P1</td><td>展平特征、块缩放与L2正则化耦合；已确认设计问题</td><td>288、7424、33408等维度，除sqrt维度，固定C10和多块权重 [E07,E18–E20]</td><td>同C不表示同函数空间惩罚强度</td><td>报告缩放与训练侧Scaler；未来给公平训练侧搜索预算，或明确评价整套读出</td></tr>
+<tr><td>Q10 P1</td><td>Mamba顺序的生物学解释有限；已确认限制</td><td>静态ROI顺序、随机顺序和身份/PE诊断 [E06]</td><td>ROI扫描不是fMRI时间建模，顺序敏感不证明最优解剖顺序</td><td>明确序列轴；不要称已恢复时间依赖或确立脑区因果次序</td></tr>
+<tr><td>Q11 P1</td><td>mask难度未必可比；历史已部分修正</td><td>ROI行列遮挡与边遮挡、重叠patch和对称矩阵 [E01,E06]</td><td>同“50%”可能隐藏不同边数；镜像/重叠可能造成泄漏</td><td>共用原始FC隐藏边预算；已有成对对称、raw输入先mask与共同mask证据保留，不再笼统说未处理</td></tr>
+<tr><td>Q12 P1</td><td>GCN传播机制解释尚未唯一定位；待检验解释</td><td>固定轮次单位传播更好 [E14]</td><td>可能涉及边估计/符号/稀疏化/重复聚合，不足以唯一认定过平滑</td><td>优先最小传播/建图对照；当前Brain/FS结果前不下家族判决</td></tr>
+<tr><td>Q13 P1</td><td>缺少当前协议内随机编码器及无传播锚点；部分旧分支有</td><td>早期随机MAE对照存在；严格960冻结读出未同批运行所有随机锚点 [E06,E19]</td><td>“特征可线性分类”不等于学习到的表示优于随机映射</td><td>若论证学习收益，预设同结构随机/无传播与raw FC；不要把旧不同协议的锚点搬来补齐</td></tr>
+<tr><td>Q14 P1</td><td>预训练与scratch公平性；已有研究但结论有限</td><td>原预训练不同数据量、下游读出/选轮、监督迁移种子效应不一致 [E06,E10]</td><td>不能只把某一差异归因预训练知识</td><td>报告训练数据量与优化预算，保留配对种子和完整结果；后续集中一个确认问题</td></tr>
+<tr><td>Q15 P1</td><td>MoE/LoRA/DoRA命名可能夸大复现范围；已确认边界</td><td>本地两专家稠密计算、FFN-only低秩适配、指定rank/alpha [E11–E13]</td><td>不能称复现所有稀疏专家或高效微调方法</td><td>注明接入层、可训参数、head/encoder是否更新；不以无收益外推整个方法家族</td></tr>
+<tr><td>Q16 P1</td><td>“模型小/大”与样本复杂度没有直接因果证据；待检验解释</td><td>5M/22M预训练与8万级监督Mamba属于不同模型 [E06,E14]</td><td>小模型改善可能来自容量、输入、训练或选择规则</td><td>把模型规模、数据量学习曲线作为指定对照；不把“过拟合”当所有差异的万能原因</td></tr>
+</tbody></table></div>
+</section>
+<section class="search-section" id="issues-4">
+<h3>数据质量、来源和泛化</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>编号/优先级</th><th>问题与状态</th><th>现有依据</th><th>影响</th><th>建议与是否需新训练</th></tr></thead><tbody>
+<tr><td>Q17 P0</td><td>历史身份/重复/有限值与影像质量不是同一门槛；历史限制明确</td><td>早608身份未完全核实；698仅有限矩阵；966重复时序暂缓；960按CC200常数ROI统一 [E02,E03,E05,E15]</td><td>人数不能单独证明独立样本或优质影像</td><td>各阶段单列准入，不把旧探索升级为同等证据；当前固定960不随结果换人</td></tr>
+<tr><td>Q18 P1</td><td>站点/头动/年龄性别混杂；已检查但未因果解决</td><td>已有协变量参照与训练侧去混杂 [E16]</td><td>FC预测可能部分关联采集及人口学分布；去混杂改善/下降都不能唯一归因</td><td>报告已做参照，预设敏感性；任何变换训练侧拟合，不能全队列去混杂</td></tr>
+<tr><td>Q19 P1</td><td>Schaefer低覆盖；已确认限制，非自动排除规则</td><td>806/960任一ROI官方mask&lt;50%，每ROI非零，空间检查通过 [E22]</td><td>腹侧ROI信号质量有风险，不能称所有区域正常</td><td>保留flags、提取约定和范围；不能临时按外层分数选择mask归一化或删人</td></tr>
+<tr><td>Q20 P1</td><td>官方mask与非恒定体素比例不同；已修正</td><td>对应&lt;50%人数806与349；三例也显示不一致 [E22]</td><td>不能用其中一种替代另一种作已验证QC阈值</td><td>文稿/图例写清定义和分母；无需重复下载或重跑同一核验</td></tr>
+<tr><td>Q21 P1</td><td>公式适配与逐字复现之间有差异；已披露</td><td>FS无官方代码、参数差异；Brain稠密兼容、作者StepLR/sigmoid；C-PAC与fMRIPrep不同 [E23]</td><td>文献分数不可当同协议目标，方法差异不能藏起来</td><td>保留公式—代码映射、未指定细节与差异表，不为凑参数擅加层</td></tr>
+<tr><td>Q22 P1</td><td>家庭关系、采集依赖和外部独立性信息有限；未充分确认</td><td>ABIDE公开元数据及既有报告未确证全部家庭分组 [E14,E24]</td><td>身份不重复不等于所有对象统计独立</td><td>不编造家庭排除；最终报告列为未确认信息，外部确认方案另行核查</td></tr>
+<tr><td>Q23 P1</td><td>外部基础模型训练数据重叠未知；未核实</td><td>TabPFN公开权重离线推断，但基础预训练是否含ABIDE未审计 [E13]</td><td>不能称完全无预训练污染的公平同数据比较</td><td>单列外部模型参考和未知范围，不把离线运行等同预训练独立</td></tr>
+</tbody></table></div>
+</section>
+<section class="search-section" id="issues-5">
+<h3>统计、指标和结果解读</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>编号/优先级</th><th>问题与状态</th><th>现有依据</th><th>影响</th><th>建议与是否需新训练</th></tr></thead><tbody>
+<tr><td>Q24 P1</td><td>fold/seed/fit伪重复；已识别风险</td><td>同人群多折、重叠训练集、双种子及数千拟合 [E10–E24]</td><td>普通独立样本检验或巨大n会高估精度</td><td>受试者与站点是不同目标单位，保留配对/层级；先定义推断对象再定检验或区间</td></tr>
+<tr><td>Q25 P1</td><td>站点等权与按人数加权的目标不同；已确认</td><td>19站点大小不均，AAL pooled与macro BA不同 [E21]</td><td>总体高分可掩盖小站点弱表现；小站点极端值噪声也大</td><td>主指标按协议，其他口径并列。不要看到某种均值更好才换主指标</td></tr>
+<tr><td>Q26 P1</td><td>合并AUROC和站点AUROC均值不同；已确认</td><td>各外层用不同训练模型，校准可能改变跨站分数尺度 [E17,E21]</td><td>合并排序含跨站概率尺度因素</td><td>同时报告合并及站点指标，并写清同seed/先算后平均规则</td></tr>
+<tr><td>Q27 P1</td><td>主阈值与补充阈值不能反选；当前已冻结</td><td>AAL OOF阈值ACC58.23%、固定0.5补充59.11% [E21]</td><td>用外层更高者回选会引入选择偏差</td><td>主规则保留，即使补充数更高；阈值只用训练OOF</td></tr>
+<tr><td>Q28 P1</td><td>概率质量与区分度混淆；已做校准诊断</td><td>BCE/Brier/ECE可能改善而ACC不改善；某些神经AUROC尚可但BCE很大 [E13,E17]</td><td>不能只看AUC或把Brier改善全部称校准收益</td><td>报告可靠性、区分度、分类阈值和训练样本量；需同时解释过度自信</td></tr>
+<tr><td>Q29 P1</td><td>微小差距和负结果的措辞；已确认限制</td><td>不同种子方向变化，小数千分位差异；无本次新增区间/检验</td><td>“更好”不等于可靠或有实际意义，“未证实”不等于等效</td><td>报告效应大小、种子与站点；无依据不称显著、等效或普遍无效</td></tr>
+<tr><td>Q30 P1</td><td>ROI权重、attention、gate不等于病因；已确认推断边界</td><td>多种权重由预测目标学出 [E13,E23]</td><td>可预测关联可能来自相关结构、混杂或不稳定特征</td><td>先看稳定性及对照，再作功能解释；不输出确证疾病标志物或因果结论</td></tr>
+</tbody></table></div>
+</section>
+<section class="search-section" id="issues-6">
+<h3>已修复与工程记录：不应反复当成当前科学阻塞</h3>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>编号</th><th>事项</th><th>当前判断</th><th>保留原则</th></tr></thead><tbody>
+<tr><td>R01</td><td>旧773人/混站权重复用于960留站的风险</td><td>已拒绝，按严格960重训Transformer/GCN并核训练ID [E19]</td><td>不能为省计算绕过来源核验</td></tr>
+<tr><td>R02</td><td>BrainNetCNN评估仍默认dropout、GPU恢复不确定性</td><td>旧适配已显式eval控制，并启用确定性算法通过门槛 [E13]</td><td>原失败与修复分开留存，不冒称作者原行为完全不变</td></tr>
+<tr><td>R03</td><td>TabPFN float32/float64 log loss复算精度差</td><td>独立按原dtype审计，选择不变、指标统一重算，完成PASS [E13]</td><td>数值表示修复不是重新挑结果，不重训也不隐藏旧失败</td></tr>
+<tr><td>R04</td><td>AAL候选漏设Python/NumPy初始种子</td><td>v2严格恢复FAIL已保留，v3补种子后全部状态恢复通过 [E21]</td><td>旧通过项不能替代改码后的新恢复验收</td></tr>
+<tr><td>R05</td><td>下载中断、整文件截断与本机转发退出</td><td>分块校验、原预算续传，960已齐，不重复下载 [E22]</td><td>连接失败与实验失败分开，保留旧残片与时钟</td></tr>
+<tr><td>R06</td><td>GPU0授权变化、GPU1共享与并发</td><td>最终只用GPU1最多6，GPU0等待器禁用；当前正式队列按封存限制 [E23]</td><td>不动其他用户进程，不因这次审查改现有队列</td></tr>
+<tr><td>R07</td><td>Schaefer只有文件完整性而无质量审核</td><td>后续补齐官方mask、坐标/来源与6例叠加，数据层放行且保留覆盖限制 [E22]</td><td>不能再说“数据没验收”，也不能说“所有ROI良好”</td></tr>
+<tr><td>R08</td><td>只做模拟门槛却声称正式训练</td><td>已区分合成函数、真实生产短测、冻结发布和正式运行 [E23]</td><td>各scope保留；当前722fit已正式开始，不沿用旧未启动文字</td></tr>
+<tr><td>R09</td><td>长期材料状态陈旧</td><td>本次现场核对MoE/LoRA/DoRA/一致性等完成状态</td><td>旧README和聊天是历史，不覆盖新版完成回执</td></tr>
+</tbody></table></div>
+</section>
+<section class="search-section" id="issues-7">
+<h3>一个可控的后续问题结构</h3>
+<p>如果当前文献图流程没有稳定收益，最多先选一个主问题推进：</p>
+<ol>
+<li>表示目标是否正确：同输入、同读出、预训练/随机/scratch/raw FC的匹配比较。</li>
+<li>图传播是否正确：同节点输入、同参数、同训练协议，只改变传播/边构造的最小对照。</li>
+<li>输入信息是否主导：单图谱/双图谱raw FC与相同信息预算的神经表示比较。</li>
+</ol>
+<p>哪个优先由已完成主结果及老师的研究问题决定。这不是三条都自动扩成大网格。每轮先写支持/推翻哪种解释、保留什么、唯一改变什么、用哪个训练侧指标决策、何时停止，再封存预算。当前已授权队列保持不动。</p>
+</section><section class="search-section" id="sources-1">
+<h2>证据索引与可复核范围</h2>
+<p>本索引为回顾性研究审查。历史记录按对应日期和协议引用；当前完成状态以新版核验回执为准。这里的名称是证据定位名称，不代表所有原始文件都公开。</p>
+<div class="table-wrap" tabindex="0"><table><thead><tr><th>编号</th><th>证据与日期</th><th>本次使用的事实</th><th>范围/限制</th></tr></thead><tbody>
+<tr><td>E01</td><td>NeuroSTORM原论文、代码/数学研读包，9月；作者源码4971d5d1343e99137460f265270e92c3159e5106</td><td>4D到静态FC二维适配、mask/STRD/prompt边界</td><td>论文解释、静态源码与教学检查不等于复算原论文实验</td></tr>
+<tr><td>E02</td><td>9月28日完整实验、小骨干、ABC监督适配、正则化和特征诊断报告</td><td>初始MAE与四迁移方式、三种子、61行验证及608身份限制</td><td>探索性验证，不升级为独立测试</td></tr>
+<tr><td>E03</td><td>O698/E1P4官方结构适配历史审计与实验谱系</td><td>有限矩阵人群、558开发子集与不同划分</td><td>历史源码/报告范围，不重新计算旧结果或假定全影像QC</td></tr>
+<tr><td>E04</td><td>NeuroSTORM项目接手入口、NIAK795正式90/M90/固定LR最终证书，10月20日</td><td>完成数量、M90新增外层0、第三内部折结果和checkpoint目标差异</td><td>源报告可由私有原始档案复核；<a href="https://github.com/Wenhow1/neurostorm-abide-reproduction/releases/tag/niak795-m90-complete-20261020">M90发布入口</a></td></tr>
+<tr><td>E05</td><td>数据筛选与来源核查、FC研究学习指南、C-PAC966准备记录，10月20—23日</td><td>1112至966流程、时长口径、重复与质量flags、ABIDE II候选边界</td><td>没有把候选队列都当已训练数据</td></tr>
+<tr><td>E06</td><td>从数据到模型学习指南、完整结果解读、token/PE演变，上游完成证书</td><td>610/290/66、230上游/18重拟合/37评价、容量/目标/顺序与结构诊断</td><td>大规模正式批次与三折先导分开</td></tr>
+<tr><td>E07</td><td>下游与全局池化诊断、平均/展开与三分类器结果，10月23—24日</td><td>方差诊断、99读出/8缓存、平均与展平数值、MLP告警</td><td>读出比较含维度/正则化变化；R0参照AUROC0.6936属于该分支</td></tr>
+<tr><td>E08</td><td>残差相关目标结果、上游与下游完成核验，10月25—26日</td><td>40上游、8重拟合/缓存/读出，原目标与新目标比较</td><td>没有从未改善推导所有相关目标无效</td></tr>
+<tr><td>E09</td><td>ROI一致性目标完成状态与8行汇总/复算PASS，10月30日重新读取</td><td>两骨干、两目标、双种子，80折结果复算</td><td>本分支base与其他目标分支不同，分开比较</td></tr>
+<tr><td>E10</td><td>监督迁移与BNT结果，10月26日</td><td>600内层+100外层，scratch/预训练不跨种子稳定改善</td><td>本地BNT适配不是论文成绩复现</td></tr>
+<tr><td>E11</td><td>冻结MoE结果汇总与verification PASS，10月30日现场刷新</td><td>960内层+160外层，线性/adapter/等权/门控</td><td>旧中途OOM不等于现在未完成；稠密双专家不等于稀疏MoE论文复现</td></tr>
+<tr><td>E12</td><td>LoRA结果与verification PASS，10月30日现场刷新</td><td>480内层+80外层；原骨干冻结与低秩更新已核验</td><td>FFN-only指定rank/alpha的局部方法</td></tr>
+<tr><td>E13</td><td>全天追加模型结果、all_summary和分组verification，10月27日完成、10月30日刷新</td><td>注意力/DoRA/BrainNetCNN/早期BrainGNN、TabPFN/LR、恢复与dtype审计</td><td>旧图输入不同于当前文献流程；TabPFN预训练重叠未知</td></tr>
+<tr><td>E14</td><td>DirectFC v1.3开发证据包、selection、状态与公开图文，10月28日</td><td>237拟合、7模型、193本协议未评分，GCN传播配对诊断</td><td><a href="https://github.com/Wenhow1/neurostorm-abide-research-summary/tree/main/研究结果/DirectFC_v1.3_20261028">公开来源</a>；开发选模值不是独立测试</td></tr>
+<tr><td>E15</td><td>CC200及融合整站点留出报告，10月28日</td><td>严格960、19LOSO、多图谱与原始线性参照</td><td>与固定C10/不同阈值分支分开，不能混成同一baseline</td></tr>
+<tr><td>E16</td><td>时间序列、多图谱、站点头动报告，10月28日</td><td>混站与留站、站点/头动/人口学及去混杂已检查</td><td>简单时间特征不代表完整时序模型已训练</td></tr>
+<tr><td>E17</td><td>960人校准与独立阈值流程报告，10月28日</td><td>1710内部拟合、可靠性/概率质量改善、分类未获益、基模型训练人数改变</td><td>评价校准流程，不作为单一校准组件因果比较</td></tr>
+<tr><td>E18</td><td>960加权收缩候选决策、原始汇总、训练侧稳定性，10月28日</td><td>候选70.73%ACC、权重/收缩含义</td><td>反复开发候选，不是外部确认或病理贡献分解</td></tr>
+<tr><td>E19</td><td>冻结Mamba线性读出、三骨干冻结读出报告，10月29日</td><td>严格960匹配表、拒绝773权重复用并重训、固定10轮与C10</td><td>监督表示，不能写MAE；研究历史开发曝光</td></tr>
+<tr><td>E20</td><td>三种融合开发汇总、协议、终审核验与交付，10月29日</td><td>概率/特征/双分支已完成，raw dual参照及种子一致性</td><td>不同融合与baseline匹配，不把预测组都算新fit</td></tr>
+<tr><td>E21</td><td>AAL116 BrainGNN正式终审核验与汇总，10月30日</td><td>228内层/38重拟合/38评分、1944文件核验、双seed全部960、OOF阈值指标</td><td>所有最终模型冻结后评分；独立实验；不称新盲测</td></tr>
+<tr><td>E22</td><td>Schaefer全量来源/完整性、官方mask、空间坐标与6例叠加、cohort release，10月30日</td><td>960齐全、806低覆盖flags、坐标对应和本地适配放行</td><td>放行不是所有ROI优质；未改变均值和人群</td></tr>
+<tr><td>E23</td><td>Schaefer冻结协议、3880文件发布清单、生产六路/恢复/跨组冻结/队列门槛与实时状态，10月30日</td><td>正式722fit、95最终模型统一冻结后评分、LR完成/Brain运行</td><td>启动前manifest快照和运行status分开；不读取未冻结的外层结果</td></tr>
+<tr><td>E24</td><td>只读实验谱系、历史报告/图源、归档与恢复回执</td><td>阶段与来源关系、历史数据曝光和不同证据层级</td><td>谱系不是完整实时实验总账；未把所有节点当实验或所有拟合当独立n</td></tr>
+</tbody></table></div>
+</section>
+<section class="search-section" id="sources-2">
+<h3>一次来源与方法核对</h3>
+<ul>
+<li>原研究：<a href="https://arxiv.org/abs/2506.11167">NeuroSTORM论文版本入口</a>，<a href="https://github.com/CUHK-AIM-Group/NeuroSTORM">作者代码</a>。</li>
+<li>本项目图模型依据：BrainGNN作者代码固定commit <code>1e337e7a13af5e4374343fda81ce11b62c5ce566</code>；FS-GNN用户提供全文，未找到官方代码，本地公式实现及不明细节写入当前冻结协议。</li>
+<li>数据空间：<a href="https://preprocessed-connectomes-project.org/abide/cpac.html">PCP ABIDE C-PAC说明</a>，<a href="https://github.com/preprocessed-connectomes-project/abide/blob/master/preprocessing/settings/pipeline_config_abide_rerun.yml">发布管线配置来源</a>。旧ROI均值源码固定commit <code>a07b91746b766626eb4d2b7c9c9bb8161f779f42</code>；不把当前最新版C-PAC默认设置反推旧数据。</li>
+<li>统计：<a href="https://jmlr.csail.mit.edu/papers/v11/cawley10a.html">模型选择过拟合</a>、<a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html">嵌套交叉验证</a>、<a href="https://scikit-learn.org/stable/modules/calibration.html">概率校准与评分规则</a>。这些支持方法解释，不提供本项目新的p值或置信区间。</li>
+</ul>
+</section>
+<section class="search-section" id="sources-3">
+<h3>本次新生成内容和未做的事</h3>
+<p>生成研究主线、问题清单、阶段目录与公开证据索引；读取既有汇总做描述性归纳，按seed算术平均的数值均可回到对应汇总。未新开训练、未改现有协议、未新看尚未允许的外层结果、未生成新显著性结论、未声称重审了全项目每个原始逐步日志。公共文件不含个体级数据；私有定位与文件哈希留在本机审查目录。</p>
+</section></article></main><footer>汇总级回顾性审查 · 不含个体数据 · 当前正式队列保持原协议</footer><script>const q=document.querySelector('#search');q.addEventListener('input',()=>{const s=q.value.trim().toLocaleLowerCase();document.querySelectorAll('.search-section').forEach(el=>el.hidden=!!s&&!el.textContent.toLocaleLowerCase().includes(s));});document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{q.value='';q.dispatchEvent(new Event('input'));}));</script></body></html>
