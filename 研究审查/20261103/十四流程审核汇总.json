@@ -1,0 +1,981 @@
+{
+  "state": "ACTUAL_AUDITED_FOURTEEN_FLOW_AGGREGATE_ONLY",
+  "date": "2026-11-03",
+  "cohort_n": 960,
+  "sites": 19,
+  "flows": 14,
+  "seed_groups": 26,
+  "computational_fits": {
+    "historical": 1786,
+    "new_static": 1064,
+    "new_reliability": 190,
+    "new_temporal": 532,
+    "total_distinct": 3572,
+    "technical_gate_fits_separate": true
+  },
+  "aggregation": "Primary is equal19-site mean BA. Neural seed metrics computed separately then averaged; no probability ensemble or independent biological replication.",
+  "across_seed_mean": {
+    "lr": {
+      "selected_threshold": {
+        "ACC": 0.665625,
+        "BA": 0.6638993316624895,
+        "AUROC": 0.7151994569757728,
+        "site_mean_BA": 0.6567638338393514,
+        "site_mean_AUROC": 0.6911440193204982,
+        "sensitivity": 0.6293859649122807,
+        "specificity": 0.6984126984126984,
+        "BCE": 1.659305741037354
+      },
+      "fixed_05": {
+        "ACC": 0.671875,
+        "BA": 0.6717314118629909,
+        "AUROC": 0.7151994569757728,
+        "site_mean_BA": 0.6665541196360505,
+        "site_mean_AUROC": 0.6911440193204982,
+        "sensitivity": 0.668859649122807,
+        "specificity": 0.6746031746031746,
+        "BCE": 1.659305741037354
+      }
+    },
+    "brain": {
+      "selected_threshold": {
+        "ACC": 0.5739583333333333,
+        "BA": 0.5734649122807018,
+        "AUROC": 0.6121749686716792,
+        "site_mean_BA": 0.5730707489963535,
+        "site_mean_AUROC": 0.6321406419096618,
+        "sensitivity": 0.5635964912280702,
+        "specificity": 0.5833333333333334,
+        "BCE": 0.7364066569566641
+      },
+      "fixed_05": {
+        "ACC": 0.5713541666666666,
+        "BA": 0.5704626148705096,
+        "AUROC": 0.6121749686716792,
+        "site_mean_BA": 0.5682559073810148,
+        "site_mean_AUROC": 0.6321406419096618,
+        "sensitivity": 0.5526315789473684,
+        "specificity": 0.5882936507936508,
+        "BCE": 0.7364066569566641
+      }
+    },
+    "fs": {
+      "selected_threshold": {
+        "ACC": 0.6317708333333334,
+        "BA": 0.6273235171261486,
+        "AUROC": 0.6821502541074909,
+        "site_mean_BA": 0.6080213877634428,
+        "site_mean_AUROC": 0.6907375476376525,
+        "sensitivity": 0.5383771929824561,
+        "specificity": 0.7162698412698413,
+        "BCE": 0.8433542523421346
+      },
+      "fixed_05": {
+        "ACC": 0.6380208333333333,
+        "BA": 0.633171470342523,
+        "AUROC": 0.6821502541074909,
+        "site_mean_BA": 0.6146185563235218,
+        "site_mean_AUROC": 0.6907375476376525,
+        "sensitivity": 0.5361842105263157,
+        "specificity": 0.7301587301587302,
+        "BCE": 0.8433542523421346
+      }
+    },
+    "no_encoding": {
+      "selected_threshold": {
+        "ACC": 0.628125,
+        "BA": 0.6166979949874687,
+        "AUROC": 0.6899322960178224,
+        "site_mean_BA": 0.6030149656484503,
+        "site_mean_AUROC": 0.7187732018381439,
+        "sensitivity": 0.3881578947368421,
+        "specificity": 0.8452380952380952,
+        "BCE": 1.1330495978430846
+      },
+      "fixed_05": {
+        "ACC": 0.6307291666666667,
+        "BA": 0.6182905179615705,
+        "AUROC": 0.6899322960178224,
+        "site_mean_BA": 0.6076697041128578,
+        "site_mean_AUROC": 0.7187732018381439,
+        "sensitivity": 0.3695175438596491,
+        "specificity": 0.8670634920634921,
+        "BCE": 1.1330495978430846
+      }
+    },
+    "mean_max_readout": {
+      "selected_threshold": {
+        "ACC": 0.621875,
+        "BA": 0.6195697577276524,
+        "AUROC": 0.6626113895850738,
+        "site_mean_BA": 0.593975773146401,
+        "site_mean_AUROC": 0.6676263356974599,
+        "sensitivity": 0.5734649122807017,
+        "specificity": 0.6656746031746031,
+        "BCE": 0.7653136082571098
+      },
+      "fixed_05": {
+        "ACC": 0.6244791666666667,
+        "BA": 0.6219977025898078,
+        "AUROC": 0.6626113895850738,
+        "site_mean_BA": 0.5947903227752172,
+        "site_mean_AUROC": 0.6676263356974599,
+        "sensitivity": 0.5723684210526315,
+        "specificity": 0.6716269841269842,
+        "BCE": 0.7653136082571098
+      }
+    },
+    "no_propagation": {
+      "selected_threshold": {
+        "ACC": 0.6390625,
+        "BA": 0.6353122389306599,
+        "AUROC": 0.6903891673628516,
+        "site_mean_BA": 0.6212268505710141,
+        "site_mean_AUROC": 0.7053037178956971,
+        "sensitivity": 0.5603070175438596,
+        "specificity": 0.7103174603174602,
+        "BCE": 0.7879919476720765
+      },
+      "fixed_05": {
+        "ACC": 0.6375,
+        "BA": 0.6333020050125313,
+        "AUROC": 0.6903891673628516,
+        "site_mean_BA": 0.6192712579453326,
+        "site_mean_AUROC": 0.7053037178956971,
+        "sensitivity": 0.549342105263158,
+        "specificity": 0.7172619047619048,
+        "BCE": 0.7879919476720765
+      }
+    },
+    "abs_graph": {
+      "selected_threshold": {
+        "ACC": 0.6322916666666667,
+        "BA": 0.6278195488721805,
+        "AUROC": 0.677390089807853,
+        "site_mean_BA": 0.6110305760200112,
+        "site_mean_AUROC": 0.699626049719619,
+        "sensitivity": 0.5383771929824561,
+        "specificity": 0.7172619047619048,
+        "BCE": 0.9180692907099692
+      },
+      "fixed_05": {
+        "ACC": 0.6401041666666667,
+        "BA": 0.6343723893065998,
+        "AUROC": 0.677390089807853,
+        "site_mean_BA": 0.6134797084915543,
+        "site_mean_AUROC": 0.699626049719619,
+        "sensitivity": 0.5197368421052632,
+        "specificity": 0.7490079365079365,
+        "BCE": 0.9180692907099692
+      }
+    },
+    "static_transformer": {
+      "selected_threshold": {
+        "ACC": 0.6312500000000001,
+        "BA": 0.6267230576441103,
+        "AUROC": 0.6743312273739905,
+        "site_mean_BA": 0.6051380218906182,
+        "site_mean_AUROC": 0.6806744108219053,
+        "sensitivity": 0.5361842105263158,
+        "specificity": 0.7172619047619048,
+        "BCE": 0.8292862207307623
+      },
+      "fixed_05": {
+        "ACC": 0.6286458333333333,
+        "BA": 0.6238774018379282,
+        "AUROC": 0.6743312273739905,
+        "site_mean_BA": 0.6028942529195332,
+        "site_mean_AUROC": 0.6806744108219053,
+        "sensitivity": 0.5285087719298246,
+        "specificity": 0.7192460317460317,
+        "BCE": 0.8292862207307623
+      }
+    },
+    "static_mamba": {
+      "selected_threshold": {
+        "ACC": 0.6348958333333333,
+        "BA": 0.6325449039264829,
+        "AUROC": 0.6891556147312726,
+        "site_mean_BA": 0.6155881277465854,
+        "site_mean_AUROC": 0.698065338603427,
+        "sensitivity": 0.5855263157894737,
+        "specificity": 0.6795634920634921,
+        "BCE": 0.7065771977676025
+      },
+      "fixed_05": {
+        "ACC": 0.6442708333333333,
+        "BA": 0.6410557644110275,
+        "AUROC": 0.6891556147312726,
+        "site_mean_BA": 0.6195299025924939,
+        "site_mean_AUROC": 0.698065338603427,
+        "sensitivity": 0.5767543859649122,
+        "specificity": 0.7053571428571428,
+        "BCE": 0.7065771977676025
+      }
+    },
+    "degree_matched_random_graph": {
+      "selected_threshold": {
+        "ACC": 0.6270833333333333,
+        "BA": 0.6190998329156223,
+        "AUROC": 0.673661149401281,
+        "site_mean_BA": 0.6032949992064383,
+        "site_mean_AUROC": 0.6766975597063611,
+        "sensitivity": 0.45942982456140347,
+        "specificity": 0.7787698412698413,
+        "BCE": 0.8615468356515295
+      },
+      "fixed_05": {
+        "ACC": 0.6229166666666667,
+        "BA": 0.6147660818713451,
+        "AUROC": 0.673661149401281,
+        "site_mean_BA": 0.5978634940566084,
+        "site_mean_AUROC": 0.6766975597063611,
+        "sensitivity": 0.45175438596491224,
+        "specificity": 0.7777777777777778,
+        "BCE": 0.8615468356515295
+      }
+    },
+    "fixed_identity_residual": {
+      "selected_threshold": {
+        "ACC": 0.6489583333333333,
+        "BA": 0.6444757727652464,
+        "AUROC": 0.6926278369534948,
+        "site_mean_BA": 0.6282257644331531,
+        "site_mean_AUROC": 0.686448074444544,
+        "sensitivity": 0.5548245614035088,
+        "specificity": 0.7341269841269842,
+        "BCE": 0.8485065323312542
+      },
+      "fixed_05": {
+        "ACC": 0.6473958333333334,
+        "BA": 0.6427266081871346,
+        "AUROC": 0.6926278369534948,
+        "site_mean_BA": 0.629179949555992,
+        "site_mean_AUROC": 0.686448074444544,
+        "sensitivity": 0.549342105263158,
+        "specificity": 0.7361111111111112,
+        "BCE": 0.8485065323312542
+      }
+    },
+    "fc_reliability": {
+      "selected_threshold": {
+        "ACC": 0.6635416666666667,
+        "BA": 0.6633771929824561,
+        "AUROC": 0.7146599136730716,
+        "site_mean_BA": 0.6613377168802622,
+        "site_mean_AUROC": 0.6925661499842143,
+        "sensitivity": 0.6600877192982456,
+        "specificity": 0.6666666666666666,
+        "BCE": 1.5330904980148883
+      },
+      "fixed_05": {
+        "ACC": 0.6760416666666667,
+        "BA": 0.6760129490392648,
+        "AUROC": 0.7146599136730716,
+        "site_mean_BA": 0.6621586299358639,
+        "site_mean_AUROC": 0.6925661499842143,
+        "sensitivity": 0.6754385964912281,
+        "specificity": 0.6765873015873016,
+        "BCE": 1.5330904980148883
+      }
+    },
+    "bold_transformer": {
+      "selected_threshold": {
+        "ACC": 0.6182291666666666,
+        "BA": 0.6152098997493735,
+        "AUROC": 0.6701236598440545,
+        "site_mean_BA": 0.606505730991328,
+        "site_mean_AUROC": 0.6577637004186909,
+        "sensitivity": 0.5548245614035088,
+        "specificity": 0.6755952380952381,
+        "BCE": 0.725331482733437
+      },
+      "fixed_05": {
+        "ACC": 0.6166666666666667,
+        "BA": 0.6128341687552215,
+        "AUROC": 0.6701236598440545,
+        "site_mean_BA": 0.5966947937032497,
+        "site_mean_AUROC": 0.6577637004186909,
+        "sensitivity": 0.5361842105263157,
+        "specificity": 0.689484126984127,
+        "BCE": 0.725331482733437
+      }
+    },
+    "bold_mamba": {
+      "selected_threshold": {
+        "ACC": 0.6125,
+        "BA": 0.6114766081871346,
+        "AUROC": 0.6646063944583681,
+        "site_mean_BA": 0.5942697005567852,
+        "site_mean_AUROC": 0.6529816099204864,
+        "sensitivity": 0.5910087719298246,
+        "specificity": 0.6319444444444444,
+        "BCE": 0.6984036788625752
+      },
+      "fixed_05": {
+        "ACC": 0.6145833333333333,
+        "BA": 0.6131474519632414,
+        "AUROC": 0.6646063944583681,
+        "site_mean_BA": 0.5942956033371893,
+        "site_mean_AUROC": 0.6529816099204864,
+        "sensitivity": 0.5844298245614035,
+        "specificity": 0.6418650793650793,
+        "BCE": 0.6984036788625752
+      }
+    }
+  },
+  "per_seed": {
+    "lr": {
+      "0": {
+        "selected_threshold": {
+          "ACC": 0.665625,
+          "BA": 0.6638993316624895,
+          "AUROC": 0.7151994569757728,
+          "site_mean_BA": 0.6567638338393514,
+          "site_mean_AUROC": 0.6911440193204982,
+          "sensitivity": 0.6293859649122807,
+          "specificity": 0.6984126984126984,
+          "BCE": 1.659305741037354
+        },
+        "fixed_05": {
+          "ACC": 0.671875,
+          "BA": 0.6717314118629909,
+          "AUROC": 0.7151994569757728,
+          "site_mean_BA": 0.6665541196360505,
+          "site_mean_AUROC": 0.6911440193204982,
+          "sensitivity": 0.668859649122807,
+          "specificity": 0.6746031746031746,
+          "BCE": 1.659305741037354
+        }
+      }
+    },
+    "brain": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.5708333333333333,
+          "BA": 0.5733082706766918,
+          "AUROC": 0.5986189431913116,
+          "site_mean_BA": 0.5877195126552685,
+          "site_mean_AUROC": 0.6234518998259585,
+          "sensitivity": 0.6228070175438597,
+          "specificity": 0.5238095238095238,
+          "BCE": 0.7388067158586814
+        },
+        "fixed_05": {
+          "ACC": 0.5625,
+          "BA": 0.5630743525480368,
+          "AUROC": 0.5986189431913116,
+          "site_mean_BA": 0.5729288889249649,
+          "site_mean_AUROC": 0.6234518998259585,
+          "sensitivity": 0.5745614035087719,
+          "specificity": 0.5515873015873016,
+          "BCE": 0.7388067158586814
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.5770833333333333,
+          "BA": 0.5736215538847118,
+          "AUROC": 0.6257309941520468,
+          "site_mean_BA": 0.5584219853374385,
+          "site_mean_AUROC": 0.640829383993365,
+          "sensitivity": 0.5043859649122807,
+          "specificity": 0.6428571428571429,
+          "BCE": 0.7340065980546469
+        },
+        "fixed_05": {
+          "ACC": 0.5802083333333333,
+          "BA": 0.5778508771929824,
+          "AUROC": 0.6257309941520468,
+          "site_mean_BA": 0.5635829258370648,
+          "site_mean_AUROC": 0.640829383993365,
+          "sensitivity": 0.5307017543859649,
+          "specificity": 0.625,
+          "BCE": 0.7340065980546469
+        }
+      }
+    },
+    "fs": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.6302083333333334,
+          "BA": 0.6276629072681704,
+          "AUROC": 0.6757910401002506,
+          "site_mean_BA": 0.6094692975003791,
+          "site_mean_AUROC": 0.6846483134635415,
+          "sensitivity": 0.5767543859649122,
+          "specificity": 0.6785714285714286,
+          "BCE": 0.8085476201848486
+        },
+        "fixed_05": {
+          "ACC": 0.63125,
+          "BA": 0.6284461152882206,
+          "AUROC": 0.6757910401002506,
+          "site_mean_BA": 0.6055454215900856,
+          "site_mean_AUROC": 0.6846483134635415,
+          "sensitivity": 0.5723684210526315,
+          "specificity": 0.6845238095238095,
+          "BCE": 0.8085476201848486
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.6333333333333333,
+          "BA": 0.626984126984127,
+          "AUROC": 0.6885094681147312,
+          "site_mean_BA": 0.6065734780265066,
+          "site_mean_AUROC": 0.6968267818117636,
+          "sensitivity": 0.5,
+          "specificity": 0.753968253968254,
+          "BCE": 0.8781608844994205
+        },
+        "fixed_05": {
+          "ACC": 0.6447916666666667,
+          "BA": 0.6378968253968254,
+          "AUROC": 0.6885094681147312,
+          "site_mean_BA": 0.623691691056958,
+          "site_mean_AUROC": 0.6968267818117636,
+          "sensitivity": 0.5,
+          "specificity": 0.7757936507936508,
+          "BCE": 0.8781608844994205
+        }
+      }
+    },
+    "no_encoding": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.628125,
+          "BA": 0.6177422723475354,
+          "AUROC": 0.6776968462823726,
+          "site_mean_BA": 0.6008128765433621,
+          "site_mean_AUROC": 0.7085493128947974,
+          "sensitivity": 0.4100877192982456,
+          "specificity": 0.8253968253968254,
+          "BCE": 1.2347265792686108
+        },
+        "fixed_05": {
+          "ACC": 0.6260416666666667,
+          "BA": 0.6138784461152882,
+          "AUROC": 0.6776968462823726,
+          "site_mean_BA": 0.5996523961773802,
+          "site_mean_AUROC": 0.7085493128947974,
+          "sensitivity": 0.3706140350877193,
+          "specificity": 0.8571428571428571,
+          "BCE": 1.2347265792686108
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.628125,
+          "BA": 0.6156537176274018,
+          "AUROC": 0.7021677457532721,
+          "site_mean_BA": 0.6052170547535383,
+          "site_mean_AUROC": 0.7289970907814903,
+          "sensitivity": 0.36622807017543857,
+          "specificity": 0.8650793650793651,
+          "BCE": 1.031372616417558
+        },
+        "fixed_05": {
+          "ACC": 0.6354166666666666,
+          "BA": 0.622702589807853,
+          "AUROC": 0.7021677457532721,
+          "site_mean_BA": 0.6156870120483355,
+          "site_mean_AUROC": 0.7289970907814903,
+          "sensitivity": 0.3684210526315789,
+          "specificity": 0.876984126984127,
+          "BCE": 1.031372616417558
+        }
+      }
+    },
+    "mean_max_readout": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.6208333333333333,
+          "BA": 0.6187343358395989,
+          "AUROC": 0.6646825396825397,
+          "site_mean_BA": 0.5933283715042501,
+          "site_mean_AUROC": 0.66295587804514,
+          "sensitivity": 0.5767543859649122,
+          "specificity": 0.6607142857142857,
+          "BCE": 0.7545475216042693
+        },
+        "fixed_05": {
+          "ACC": 0.63125,
+          "BA": 0.6284461152882206,
+          "AUROC": 0.6646825396825397,
+          "site_mean_BA": 0.6001669563454952,
+          "site_mean_AUROC": 0.66295587804514,
+          "sensitivity": 0.5723684210526315,
+          "specificity": 0.6845238095238095,
+          "BCE": 0.7545475216042693
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.6229166666666667,
+          "BA": 0.620405179615706,
+          "AUROC": 0.6605402394876079,
+          "site_mean_BA": 0.594623174788552,
+          "site_mean_AUROC": 0.6722967933497799,
+          "sensitivity": 0.5701754385964912,
+          "specificity": 0.6706349206349206,
+          "BCE": 0.7760796949099503
+        },
+        "fixed_05": {
+          "ACC": 0.6177083333333333,
+          "BA": 0.6155492898913951,
+          "AUROC": 0.6605402394876079,
+          "site_mean_BA": 0.589413689204939,
+          "site_mean_AUROC": 0.6722967933497799,
+          "sensitivity": 0.5723684210526315,
+          "specificity": 0.6587301587301587,
+          "BCE": 0.7760796949099503
+        }
+      }
+    },
+    "no_propagation": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.63125,
+          "BA": 0.6261487050960735,
+          "AUROC": 0.6860032024505709,
+          "site_mean_BA": 0.6205729013983143,
+          "site_mean_AUROC": 0.7045614879844596,
+          "sensitivity": 0.5241228070175439,
+          "specificity": 0.7281746031746031,
+          "BCE": 0.8209879484825755
+        },
+        "fixed_05": {
+          "ACC": 0.6291666666666667,
+          "BA": 0.6235380116959064,
+          "AUROC": 0.6860032024505709,
+          "site_mean_BA": 0.618197360838684,
+          "site_mean_AUROC": 0.7045614879844596,
+          "sensitivity": 0.5109649122807017,
+          "specificity": 0.7361111111111112,
+          "BCE": 0.8209879484825755
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.646875,
+          "BA": 0.6444757727652464,
+          "AUROC": 0.6947751322751323,
+          "site_mean_BA": 0.621880799743714,
+          "site_mean_AUROC": 0.7060459478069346,
+          "sensitivity": 0.5964912280701754,
+          "specificity": 0.6924603174603174,
+          "BCE": 0.7549959468615773
+        },
+        "fixed_05": {
+          "ACC": 0.6458333333333334,
+          "BA": 0.6430659983291562,
+          "AUROC": 0.6947751322751323,
+          "site_mean_BA": 0.6203451550519811,
+          "site_mean_AUROC": 0.7060459478069346,
+          "sensitivity": 0.5877192982456141,
+          "specificity": 0.6984126984126984,
+          "BCE": 0.7549959468615773
+        }
+      }
+    },
+    "abs_graph": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.640625,
+          "BA": 0.6326754385964912,
+          "AUROC": 0.6758258493455862,
+          "site_mean_BA": 0.6242785676811359,
+          "site_mean_AUROC": 0.7083441578317756,
+          "sensitivity": 0.47368421052631576,
+          "specificity": 0.7916666666666666,
+          "BCE": 0.9293410947591071
+        },
+        "fixed_05": {
+          "ACC": 0.6427083333333333,
+          "BA": 0.6340329991645781,
+          "AUROC": 0.6758258493455862,
+          "site_mean_BA": 0.6248287072905643,
+          "site_mean_AUROC": 0.7083441578317756,
+          "sensitivity": 0.4605263157894737,
+          "specificity": 0.8075396825396826,
+          "BCE": 0.9293410947591071
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.6239583333333333,
+          "BA": 0.6229636591478698,
+          "AUROC": 0.6789543302701198,
+          "site_mean_BA": 0.5977825843588866,
+          "site_mean_AUROC": 0.6909079416074624,
+          "sensitivity": 0.6030701754385965,
+          "specificity": 0.6428571428571429,
+          "BCE": 0.9067974866608313
+        },
+        "fixed_05": {
+          "ACC": 0.6375,
+          "BA": 0.6347117794486216,
+          "AUROC": 0.6789543302701198,
+          "site_mean_BA": 0.6021307096925443,
+          "site_mean_AUROC": 0.6909079416074624,
+          "sensitivity": 0.5789473684210527,
+          "specificity": 0.6904761904761905,
+          "BCE": 0.9067974866608313
+        }
+      }
+    },
+    "static_transformer": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.6302083333333334,
+          "BA": 0.6246345029239766,
+          "AUROC": 0.674890350877193,
+          "site_mean_BA": 0.6044789984281644,
+          "site_mean_AUROC": 0.670016140732942,
+          "sensitivity": 0.5131578947368421,
+          "specificity": 0.7361111111111112,
+          "BCE": 0.8361160685631911
+        },
+        "fixed_05": {
+          "ACC": 0.6302083333333334,
+          "BA": 0.62484335839599,
+          "AUROC": 0.674890350877193,
+          "site_mean_BA": 0.6069131832815924,
+          "site_mean_AUROC": 0.670016140732942,
+          "sensitivity": 0.5175438596491229,
+          "specificity": 0.7321428571428571,
+          "BCE": 0.8361160685631911
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.6322916666666667,
+          "BA": 0.628811612364244,
+          "AUROC": 0.6737721038707881,
+          "site_mean_BA": 0.6057970453530718,
+          "site_mean_AUROC": 0.6913326809108685,
+          "sensitivity": 0.5592105263157895,
+          "specificity": 0.6984126984126984,
+          "BCE": 0.8224563728983334
+        },
+        "fixed_05": {
+          "ACC": 0.6270833333333333,
+          "BA": 0.6229114452798663,
+          "AUROC": 0.6737721038707881,
+          "site_mean_BA": 0.5988753225574741,
+          "site_mean_AUROC": 0.6913326809108685,
+          "sensitivity": 0.5394736842105263,
+          "specificity": 0.7063492063492064,
+          "BCE": 0.8224563728983334
+        }
+      }
+    },
+    "static_mamba": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.6291666666666667,
+          "BA": 0.6247911445279866,
+          "AUROC": 0.6929215399610137,
+          "site_mean_BA": 0.6178121594005787,
+          "site_mean_AUROC": 0.7055980514088149,
+          "sensitivity": 0.5372807017543859,
+          "specificity": 0.7123015873015873,
+          "BCE": 0.711386265388235
+        },
+        "fixed_05": {
+          "ACC": 0.65,
+          "BA": 0.644110275689223,
+          "AUROC": 0.6929215399610137,
+          "site_mean_BA": 0.6355676736296603,
+          "site_mean_AUROC": 0.7055980514088149,
+          "sensitivity": 0.5263157894736842,
+          "specificity": 0.7619047619047619,
+          "BCE": 0.711386265388235
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.640625,
+          "BA": 0.6402986633249792,
+          "AUROC": 0.6853896895015316,
+          "site_mean_BA": 0.6133640960925922,
+          "site_mean_AUROC": 0.690532625798039,
+          "sensitivity": 0.6337719298245614,
+          "specificity": 0.6468253968253969,
+          "BCE": 0.7017681301469701
+        },
+        "fixed_05": {
+          "ACC": 0.6385416666666667,
+          "BA": 0.6380012531328321,
+          "AUROC": 0.6853896895015316,
+          "site_mean_BA": 0.6034921315553273,
+          "site_mean_AUROC": 0.690532625798039,
+          "sensitivity": 0.6271929824561403,
+          "specificity": 0.6488095238095238,
+          "BCE": 0.7017681301469701
+        }
+      }
+    },
+    "degree_matched_random_graph": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.6177083333333333,
+          "BA": 0.6092836257309941,
+          "AUROC": 0.6643823099415205,
+          "site_mean_BA": 0.608413626519786,
+          "site_mean_AUROC": 0.6606825495846264,
+          "sensitivity": 0.4407894736842105,
+          "specificity": 0.7777777777777778,
+          "BCE": 0.8770496949972837
+        },
+        "fixed_05": {
+          "ACC": 0.6104166666666667,
+          "BA": 0.6018170426065164,
+          "AUROC": 0.6643823099415205,
+          "site_mean_BA": 0.5983724068386771,
+          "site_mean_AUROC": 0.6606825495846264,
+          "sensitivity": 0.4298245614035088,
+          "specificity": 0.7738095238095238,
+          "BCE": 0.8770496949972837
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.6364583333333333,
+          "BA": 0.6289160401002506,
+          "AUROC": 0.6829399888610415,
+          "site_mean_BA": 0.5981763718930906,
+          "site_mean_AUROC": 0.6927125698280959,
+          "sensitivity": 0.4780701754385965,
+          "specificity": 0.7797619047619048,
+          "BCE": 0.8460439763057753
+        },
+        "fixed_05": {
+          "ACC": 0.6354166666666666,
+          "BA": 0.6277151211361738,
+          "AUROC": 0.6829399888610415,
+          "site_mean_BA": 0.5973545812745398,
+          "site_mean_AUROC": 0.6927125698280959,
+          "sensitivity": 0.47368421052631576,
+          "specificity": 0.7817460317460317,
+          "BCE": 0.8460439763057753
+        }
+      }
+    },
+    "fixed_identity_residual": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.6385416666666667,
+          "BA": 0.6355994152046783,
+          "AUROC": 0.6903630604288499,
+          "site_mean_BA": 0.6240869518289661,
+          "site_mean_AUROC": 0.6971113168859742,
+          "sensitivity": 0.5767543859649122,
+          "specificity": 0.6944444444444444,
+          "BCE": 0.83836594411083
+        },
+        "fixed_05": {
+          "ACC": 0.6385416666666667,
+          "BA": 0.6361215538847118,
+          "AUROC": 0.6903630604288499,
+          "site_mean_BA": 0.6261865220106649,
+          "site_mean_AUROC": 0.6971113168859742,
+          "sensitivity": 0.5877192982456141,
+          "specificity": 0.6845238095238095,
+          "BCE": 0.83836594411083
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.659375,
+          "BA": 0.6533521303258145,
+          "AUROC": 0.6948926134781398,
+          "site_mean_BA": 0.6323645770373402,
+          "site_mean_AUROC": 0.675784832003114,
+          "sensitivity": 0.5328947368421053,
+          "specificity": 0.7738095238095238,
+          "BCE": 0.8586471205516782
+        },
+        "fixed_05": {
+          "ACC": 0.65625,
+          "BA": 0.6493316624895572,
+          "AUROC": 0.6948926134781398,
+          "site_mean_BA": 0.632173377101319,
+          "site_mean_AUROC": 0.675784832003114,
+          "sensitivity": 0.5109649122807017,
+          "specificity": 0.7876984126984127,
+          "BCE": 0.8586471205516782
+        }
+      }
+    },
+    "fc_reliability": {
+      "0": {
+        "selected_threshold": {
+          "ACC": 0.6635416666666667,
+          "BA": 0.6633771929824561,
+          "AUROC": 0.7146599136730716,
+          "site_mean_BA": 0.6613377168802622,
+          "site_mean_AUROC": 0.6925661499842143,
+          "sensitivity": 0.6600877192982456,
+          "specificity": 0.6666666666666666,
+          "BCE": 1.5330904980148883
+        },
+        "fixed_05": {
+          "ACC": 0.6760416666666667,
+          "BA": 0.6760129490392648,
+          "AUROC": 0.7146599136730716,
+          "site_mean_BA": 0.6621586299358639,
+          "site_mean_AUROC": 0.6925661499842143,
+          "sensitivity": 0.6754385964912281,
+          "specificity": 0.6765873015873016,
+          "BCE": 1.5330904980148883
+        }
+      }
+    },
+    "bold_transformer": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.63125,
+          "BA": 0.6276106934001671,
+          "AUROC": 0.6753254664438875,
+          "site_mean_BA": 0.6127190337958502,
+          "site_mean_AUROC": 0.6512432184282442,
+          "sensitivity": 0.5548245614035088,
+          "specificity": 0.7003968253968254,
+          "BCE": 0.7095083940503866
+        },
+        "fixed_05": {
+          "ACC": 0.6302083333333334,
+          "BA": 0.6256787802840434,
+          "AUROC": 0.6753254664438875,
+          "site_mean_BA": 0.6035968055920385,
+          "site_mean_AUROC": 0.6512432184282442,
+          "sensitivity": 0.5350877192982456,
+          "specificity": 0.7162698412698413,
+          "BCE": 0.7095083940503866
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.6052083333333333,
+          "BA": 0.6028091060985798,
+          "AUROC": 0.6649218532442217,
+          "site_mean_BA": 0.6002924281868058,
+          "site_mean_AUROC": 0.6642841824091376,
+          "sensitivity": 0.5548245614035088,
+          "specificity": 0.6507936507936508,
+          "BCE": 0.7411545714164873
+        },
+        "fixed_05": {
+          "ACC": 0.603125,
+          "BA": 0.5999895572263994,
+          "AUROC": 0.6649218532442217,
+          "site_mean_BA": 0.5897927818144609,
+          "site_mean_AUROC": 0.6642841824091376,
+          "sensitivity": 0.5372807017543859,
+          "specificity": 0.6626984126984127,
+          "BCE": 0.7411545714164873
+        }
+      }
+    },
+    "bold_mamba": {
+      "1": {
+        "selected_threshold": {
+          "ACC": 0.6104166666666667,
+          "BA": 0.6091269841269842,
+          "AUROC": 0.6618368838763575,
+          "site_mean_BA": 0.5875325374551111,
+          "site_mean_AUROC": 0.6282657005841584,
+          "sensitivity": 0.5833333333333334,
+          "specificity": 0.6349206349206349,
+          "BCE": 0.7013436255870399
+        },
+        "fixed_05": {
+          "ACC": 0.615625,
+          "BA": 0.6132518796992481,
+          "AUROC": 0.6618368838763575,
+          "site_mean_BA": 0.5879476813888892,
+          "site_mean_AUROC": 0.6282657005841584,
+          "sensitivity": 0.5657894736842105,
+          "specificity": 0.6607142857142857,
+          "BCE": 0.7013436255870399
+        }
+      },
+      "2": {
+        "selected_threshold": {
+          "ACC": 0.6145833333333334,
+          "BA": 0.6138262322472849,
+          "AUROC": 0.6673759050403787,
+          "site_mean_BA": 0.6010068636584593,
+          "site_mean_AUROC": 0.6776975192568142,
+          "sensitivity": 0.5986842105263158,
+          "specificity": 0.628968253968254,
+          "BCE": 0.6954637321381103
+        },
+        "fixed_05": {
+          "ACC": 0.6135416666666667,
+          "BA": 0.6130430242272348,
+          "AUROC": 0.6673759050403787,
+          "site_mean_BA": 0.6006435252854895,
+          "site_mean_AUROC": 0.6776975192568142,
+          "sensitivity": 0.6030701754385965,
+          "specificity": 0.623015873015873,
+          "BCE": 0.6954637321381103
+        }
+      }
+    }
+  },
+  "temporal_independent_audit": {
+    "state": "TEMPORAL_POSTCOMPUTE_AUDIT_PASS",
+    "new_fits": 532,
+    "new_inner_fits": 456,
+    "new_refits": 76,
+    "held_scores": 76,
+    "reused_reference_models": 304,
+    "subjects_per_variant_seed": 960,
+    "sites": 19,
+    "release_files_rehashed": 7314,
+    "CPU_probability_max_difference": 4.172325134277344e-07,
+    "CPU_stable_BCE_max_difference": 1.1768215180119057e-07,
+    "saved_logit_BCE_max_difference": 5.551115123125783e-16,
+    "CPU_atol": 1e-05,
+    "CPU_rtol": 1e-05,
+    "actual_epochs": 50056,
+    "raw_step_records": 1010616,
+    "seconds": 177.78665399551392
+  },
+  "execution_policy": {
+    "original_program_start": "2026-11-01 10:11:21 +08",
+    "original_48h_deadline": "2026-11-03 10:11:21 +08",
+    "actual_limit_pause_retained": true,
+    "user_explicitly_removed_overall_wall_limit": true,
+    "new_overall_deadline": null,
+    "original_ledger_not_reset": true,
+    "completed_fits_reused": 488,
+    "partial_inner_jobs_resumed": 6,
+    "refits_completed_after_continuation": 38,
+    "fit_resource_wait_audit_limits_hours": 6
+  },
+  "audit_correction": {
+    "prior_failure_preserved": true,
+    "reason": "Auditor universal batch<=32 assertion conflicted with the frozen singleton-tail merging helper.",
+    "replacement": "Exact per-epoch batch-count sequences for each training-fold size; no arbitrary33 acceptance, no model or tolerance change.",
+    "exhaustive_sizes": 960,
+    "negative_tests": 969,
+    "actual_raw_records": 1010616,
+    "merged_singleton_tail_steps": 1600
+  },
+  "limitations": [
+    "C-PAC local adaptation, not exact original paper fMRIPrep reproduction; localFS9603 vs paper approximate9.8K.",
+    "Original signed median graph differs from paper absolute-value graph; correction and historical results retained.",
+    "806/960 participants have at least oneROI below50percent mask coverage and959 below80percent; descriptive flags only, no exclusions or zero-filling.",
+    "BOLD physicalTR units unknown; real frame order only, no seconds or frequency alignment claim.",
+    "BOLD T9826 andM7618 CE-only differ from static sparse models in input/objective/parameters; no pure equal-parameter backbone causal interpretation.",
+    "Reliability r describes within-scan split-half agreement across training people, not cross-session test-retest reliability.",
+    "Historical twoBrain CPU probabilities did not meet1e-5 tolerance, max4.64e-5; original95 GPU exact probabilities remain documented. New passes do not erase this restriction.",
+    "Historically exposed development cohort; not new blind testing, significance, equivalence or clinical validation.",
+    "Computational fits, random seeds and overlapping folds are not additional biological n.",
+    "No identities, subject predictions, weights, private manifests or complete small-site tables published."
+  ]
+}
